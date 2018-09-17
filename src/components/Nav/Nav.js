@@ -14,7 +14,7 @@ const Nav = () => (
           </Link>
 
           <Link to="/location">
-            Create post
+            Create post (temp link)
           </Link>
       
     </div>

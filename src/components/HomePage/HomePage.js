@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { Link  } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 
 import { USER_ACTIONS } from '../../redux/actions/userActions';
@@ -33,7 +33,9 @@ class HomePage extends Component {
       content = (
         <div>
 
-          Welcome, {this.props.user.userName}hmed!
+       <h2>
+            Welcome, {this.props.user.userName}hmed!
+            </h2>
           <br/>
 
 
@@ -41,6 +43,12 @@ class HomePage extends Component {
 <br/>
 <br/>
 
+<div>
+  <info>
+    Stargazers is an application that allows users to yada yada..... 
+
+  </info>
+</div>
 
 <p>
   -------------
@@ -67,7 +75,9 @@ class HomePage extends Component {
 <p>
   -------------
 </p>
-
+<br/>
+<br/>
+<Link to="/location">Create New Post</Link>
 
 
 

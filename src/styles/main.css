@@ -7,15 +7,16 @@ body {
 }
 
 .instructions h1 {
-    font-size: 24px;
+    font-size: 34px;
     font-weight: 700;
+    font-family: cursive;
 }
 
 .instructions {
     background-color: orange;
     padding: 5px;
     color: black;
-    
+    width: 100%;
     
 }
 
@@ -28,7 +29,17 @@ form {
     border-radius: 2px;
 }
 
-input {
+.locform {
+    background-color: silver;
+    width: 35%;
+    height: 460px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 40px;
+}
+
+
+nput {
     margin: 5px;
     margin-bottom: 10px;
 }
@@ -73,7 +84,7 @@ input[type="submit"] {
 
 p{
     color: white;
-    
+
 }
 
 
