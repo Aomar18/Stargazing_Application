@@ -4,21 +4,29 @@ import { Link } from 'react-router-dom';
 const Nav = () => (
   <div className="navbar">
     <div className="link">
-      
-          <Link to="/user">
-            Home
-          </Link>
-       
-          <Link to="/profile">
-            User Profile
-          </Link>
 
-          <Link to="/location">
-            Create post (temp link)
+      <span className="links">
+        <Link to="/home">
+          Home
           </Link>
+      </span>
+
+      <span className="links">
+        <Link to="/profile">
+          User Profile
+          </Link>
+      </span>
+
       
-    </div>
+
+      <span className="links">
+      <Link to="/location">
+        Create post (temp link)
+          </Link>
+          </span>
+
   </div>
+  </div >
 );
 
 export default Nav;

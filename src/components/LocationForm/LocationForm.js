@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Nav from '../../components/Nav/Nav';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -19,7 +19,7 @@ class LocationForm extends Component {
             longitude: '',
             latitude: '',
             description: '',
-            address:'',
+            address: '',
             date: '',
 
         };
@@ -51,41 +51,48 @@ class LocationForm extends Component {
                 <form className="locform">
                     <div>
                         <InputLabel>Title of location: </InputLabel>
+                        <br/>
                         <Input type="text" />
                     </div>
-                    <br/>
+                    <br />
                     <div>
                         <InputLabel>Longitude: </InputLabel>
+                        <br/>
                         <Input type="text" />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Latitude: </InputLabel>
-                        <br />
+                        <br/>
                         <Input type="text" />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Description: </InputLabel>
+                        <br/>
                         <Input type="text" />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Location Address: </InputLabel>
+                       <br/>
                         <Input type="text" />
                     </div>
-                    <br/>
+                    <br />
                     <div>
                         <InputLabel>Date: </InputLabel>
-                        <br/>
+                        <br />
                         <Input type="date" />
                     </div>
-                    <br/>
+                    <br />
                     <Button
-                    color="tertiary"
-                    variant="contained"
+                        color="tertiary"
+                        variant="contained"
                     >Submit
                     </Button>
+
+                    <Link to="/profile">Cancel</Link>
+
 
                 </form>
 

@@ -39,6 +39,12 @@ class ProfilePage extends Component {
               <div className="card">
                 favorite posts here....
 </div>
+              <div className="card">
+                favorite posts here....
+</div>
+              <div className="card">
+                favorite posts here....
+</div>
 
 
 

@@ -13,10 +13,11 @@ body {
 }
 
 .instructions {
-    background-color: orange;
+    background-image: url("../images/tree.jpg");
     padding: 5px;
-    color: black;
+    color: skyblue;
     width: 100%;
+    height: 150px;
     
 }
 
@@ -31,17 +32,23 @@ form {
 
 .locform {
     background-color: silver;
-    width: 35%;
+    width: 30%;
     height: 460px;
     margin: 20px auto;
     padding: 25px;
     border-radius: 40px;
+ 
 }
 
 
-nput {
+input {
     margin: 5px;
     margin-bottom: 10px;
+    
+}
+
+InputLabel {
+    color: white;
 }
 
 input[type="submit"] {
@@ -65,7 +72,7 @@ input[type="submit"] {
 }
 
 .navbar {
-  background-color: silver;
+  background-color: #003366;
   width: 100%;
   border-radius: 0px;
 }
@@ -79,6 +86,7 @@ input[type="submit"] {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-style: italic;
     
 }
 
@@ -111,11 +119,19 @@ p{
 
 /* Change the link color to #111 (black) on hover */
 .link:hover {
-    text-decoration: underline;
+    
     color: #eee;
+}
+.links:hover{
+    font-size:20px;
+
 }
 
 .card:hover {
     background-color: #A9A9A9;
 
+}
+
+Button {
+    padding: 10px;
 }
