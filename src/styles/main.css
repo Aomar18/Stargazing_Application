@@ -1,3 +1,7 @@
+html {
+    background-color: gray;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
@@ -8,15 +12,17 @@ body {
 }
 
 .instructions {
-    background-color: #00acb0;
+    background-color: orange;
     padding: 5px;
-    color: #ece7e7;
+    color: black;
+    
+    
 }
 
 form {
     background-color: #dbd5d5;
     width: 30%;
-    height: 3000px;
+    height: 250px;
     margin: 20px auto;
     padding: 25px;
     border-radius: 2px;
@@ -48,24 +54,31 @@ input[type="submit"] {
 }
 
 .navbar {
-  background-color: #00acb0;
+  background-color: silver;
   width: 100%;
   border-radius: 0px;
 }
 
-ul {
+.link {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
 }
 
-li {
-    float: left;
+p{
+    color: white;
+    
 }
 
-li a {
-    display: block;
+
+.link a {
+    
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -74,7 +87,7 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.link:hover {
     text-decoration: underline;
     color: #eee;
 }

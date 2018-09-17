@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
   user: state.user,
 });
 
-class UserPage extends Component {
+class HomePage extends Component {
   componentDidMount() {
     this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
   }
@@ -32,33 +32,62 @@ class UserPage extends Component {
     if (this.props.user.userName) {
       content = (
         <div>
-          <h1  id="welcome">
-            Welcome, { this.props.user.userName }!</h1> <p>Your ID is: {this.props.user.id}</p>
-          <button onClick={this.logout} > Log Out </button>
-      
-        
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+          Welcome, {this.props.user.userName}hmed!
+          <br/>
+
+
+<br/>
+<br/>
+<br/>
+
+
+<p>
+  -------------
+</p>
+
+<p> static information about observatories - 4 posts
+</p>
+
+<p>
+  -------------
+</p>
+
+
+<br/>
+<br/>
+<br/>
+
+<p>
+  -------------
+</p>
+
+<p>user posts render here</p>
+
+<p>
+  -------------
+</p>
+
+
+
+
+
+
+
+<button onClick={this.logout} > Sign Out </button>
         </div>
       );
     }
 
     return (
       <div>
-        <Nav />
-        { content }
+        <Nav className="navnav" />
+        {content}
       </div>
     );
   }
 }
 
 // this allows us to use <App /> in index.js
-export default connect(mapStateToProps)(UserPage);
+export default connect(mapStateToProps)(HomePage);
 

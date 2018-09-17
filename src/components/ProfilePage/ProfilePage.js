@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
+
 
 const mapStateToProps = state => ({
   user: state.user,
 });
 
-class InfoPage extends Component {
+class ProfilePage extends Component {
   componentDidMount() {
     this.props.dispatch({type: USER_ACTIONS.FETCH_USER});
   }
@@ -25,12 +26,49 @@ class InfoPage extends Component {
     if (this.props.user.userName) {
       content = (
         <div>
-          <p>
-            Info Page
-          </p>
+                   
+
+          <h1> Profile Page </h1>
+
+<div>
+  favorite posts here....
+</div>
+
+
+<br />
+<br />
+<br />
+
+
+<div>
+  user posts render here...
+</div>
+
+<br />
+<br />
+
+
+<p> pagination of user information also here..</p>
+
+
+<br />
+<br />
+
+
+<div> link to create new post page here... </div>
+<Link to="/location">Create New Post</Link>
+
+
+
+
+<br/>
+<br/>
+
+
         </div>
       );
     }
+    
 
     return (
       <div>
@@ -42,4 +80,4 @@ class InfoPage extends Component {
 }
 
 // this allows us to use <App /> in index.js
-export default connect(mapStateToProps)(InfoPage);
+export default connect(mapStateToProps)(ProfilePage);
