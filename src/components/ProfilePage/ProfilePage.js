@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 
 class ProfilePage extends Component {
   componentDidMount() {
-    this.props.dispatch({type: USER_ACTIONS.FETCH_USER});
+    this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
   }
 
   componentDidUpdate() {
@@ -26,58 +26,71 @@ class ProfilePage extends Component {
     if (this.props.user.userName) {
       content = (
         <div>
-                   
+
 
           <h1> Profile Page </h1>
 
-<div>
-  favorite posts here....
+          <div className="card-container-pp">
+            <span>
+              <div className="card">
+                favorite posts here....
+</div>
+
+              <div className="card">
+                favorite posts here....
 </div>
 
 
-<br />
-<br />
-<br />
+
+            </span>
 
 
-<div>
-  user posts render here...
+
+            <br />
+            <br />
+            <br />
+
+
+            <div className="card">
+              user posts render here...
 </div>
 
-<br />
-<br />
+            <br />
+            <br />
 
 
-<p> pagination of user information also here..</p>
+            <p> pagination of user information also here..</p>
+            <p> 1 , 2 , 3 , 4</p>
 
 
-<br />
-<br />
+            <br />
+            <br />
 
 
-<div> link to create new post page here... </div>
-<Link to="/location">Create New Post</Link>
+            <div> link to create new post page here... </div>
+           
+            <Link to="/location">Create New Post</Link>
 
 
 
 
-<br/>
-<br/>
+            <br />
+            <br />
 
 
+          </div>
         </div>
       );
     }
-    
+
 
     return (
       <div>
         <Nav />
-        { content }
+        {content}
       </div>
     );
   }
 }
-
 // this allows us to use <App /> in index.js
 export default connect(mapStateToProps)(ProfilePage);

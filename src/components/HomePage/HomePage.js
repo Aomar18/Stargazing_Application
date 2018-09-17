@@ -81,7 +81,7 @@ class HomePage extends Component {
 
 
 
-
+<br/>
 
 
 <button onClick={this.logout} > Sign Out </button>

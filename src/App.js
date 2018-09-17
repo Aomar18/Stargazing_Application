@@ -12,7 +12,7 @@ import RegisterPage from './components/RegisterPage/RegisterPage';
 import HomePage from './components/HomePage/HomePage';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import LocationForm from './components/LocationForm/LocationForm';
-
+import AdminPage from './components/AdminPage/AdminPage';
 import './styles/main.css';
 
 const App = () => (
@@ -41,18 +41,14 @@ const App = () => (
           path="/location"
           component={LocationForm}
         />
-        {/* <Route
-          path="/"
-          component={CreatePostPage}
-        />
         <Route
           path="/admin"
           component={AdminPage}
-        /> */}
+        /> 
 
 
         {/* OTHERWISE (no path!) */}
-        <Route render={() => <h1>404</h1>} />
+        <Route render={() => <h1>404: PAGE NOT FOUND</h1>} />
 
       </Switch>
     </Router>
