@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function* fetchLocation() {
   try {
-    const LocationResponse = yield call(axios.get, '/location')
+    const LocationResponse = yield call(axios.get, '/api/location')
 
     const responseAction = { type: 'SET_LOCATION', payload: LocationResponse.data };
     yield put(responseAction);
@@ -19,11 +19,11 @@ function* fetchLocation() {
 
   function* addItem(action) {
     try {
-      yield call(axios.post, '/', action.payload);
+      yield call(axios.post, '/api/location/', action.payload);
       yield put({ type: 'FETCH_LOCATION' });
     } catch (error) {
-      console.log('error in post item saga', error);
-      alert('unable to add item')
+      console.log('error in post saga', error);
+      alert('unable to add ')
     }
   }
 

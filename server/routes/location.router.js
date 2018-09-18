@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
         locationToAdd.longitude,
         locationToAdd.latitude,
         locationToAdd.description,
-        itemToAdd.image_path,
+        locationToAdd.image_path,
         locationToAdd.address,
         locationToAdd.date,
         req.user.id]).then((results) => {
@@ -41,6 +41,29 @@ router.post('/', (req, res) => {
         res.sendStatus(403);
     }
 });
+
+
+//GET BY ID
+
+router.get('/:id', (req, res) => {
+    if(req.isAuthenticated()){
+        const query = `SELECT "location".*, "person"."id" as person_id, "person"."username"
+                        FROM  "location"
+                        JOIN "person"
+                        ON "person"."id" = "location"."person_id"
+                        WHERE "person"."id" = $1;`;
+        pool.query(query, [req.params.id]).then((results) => {
+            res.send(results.rows); 
+        }).catch((error) => {
+            console.log('Error getting items by user id', error);
+            res.sendStatus(500);
+        });
+    } else {
+        res.sendStatus(403);
+    }
+});
+
+
 
 
 module.exports = router;

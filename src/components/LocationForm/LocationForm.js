@@ -114,6 +114,7 @@ class LocationForm extends Component {
                             onSuccess={this.getImage}
                         />
                         <br/>
+                        <br/>
                     <span>
 
                         <Button type="submit"
