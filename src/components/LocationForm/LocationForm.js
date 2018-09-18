@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Nav from '../../components/Nav/Nav';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
-// import ReactFilestack from 'filestack-react';
+import ReactFilestack from 'filestack-react';
 
 const mapStateToProps = state => ({
+    state
 
 });
+
+//USED FOR FILESTACK -- 
+const options = {
+    accept: 'image/*',
+    maxFiles: 1,
+    storeTo: {
+      location: 's3',
+    },
+  };
+
+
 
 
 class LocationForm extends Component {
@@ -22,19 +34,19 @@ class LocationForm extends Component {
             description: '',
             address: '',
             date: '',
-
+            image_path: '',
         };
     }
 
-    // getImageURL = (result) => {
-    //     console.log('filestack submitted', result.filesUploaded);
-    //     alert('Image added!');
-    //     this.setState({
-    //         ...this.state,
-    //         image_path: result.filesUploaded[0].url
-    //     })
-    //     console.log(this.state.image_url);
-    // }
+    getImage = (result) => {
+        console.log('filestack submitted', result.filesUploaded);
+        alert('Image added!');
+        this.setState({
+            ...this.state,
+            image_path: result.filesUploaded[0].url
+        })
+        console.log(this.state.image_url);
+    }
 
     handleChange = (event) => {
         this.setState({
@@ -95,23 +107,23 @@ class LocationForm extends Component {
                         <Input type="date" value={this.state.date} onChange={this.handleChange} />
                     </div>
                     <br />
-
+                        <ReactFilestack
+                            apikey='A7pk8oI7SPkvSAPpV69qAz'
+                            buttonText="Upload an Image"
+                            options={options}
+                            onSuccess={this.getImage}
+                        />
+                        <br/>
                     <span>
+
                         <Button type="submit"
                             color="primary"
                             variant="contained"
                         >Submit
                     </Button>
+
+                        <Link to="/profile">Cancel</Link>
                     </span>
-                    <span>
-                        <Button color="secondary"
-                            variant="contained"
-                            onClick={this.handleCancel}>
-                            Cancel</Button>
-                    </span>
-
-
-
 
                 </form>
 
