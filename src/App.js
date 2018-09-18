@@ -13,6 +13,7 @@ import HomePage from './components/HomePage/HomePage';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import LocationForm from './components/LocationForm/LocationForm';
 import AdminPage from './components/AdminPage/AdminPage';
+import DetailsPage from './components/DetailsPage/DetailsPage';
 import './styles/main.css';
 
 const App = () => (
@@ -44,6 +45,10 @@ const App = () => (
         <Route
           path="/admin"
           component={AdminPage}
+        /> 
+        <Route
+          path="/details"
+          component={DetailsPage}
         /> 
 
 

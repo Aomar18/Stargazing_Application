@@ -18,7 +18,7 @@ class HomePage extends Component {
 
   componentDidUpdate() {
     if (!this.props.user.isLoading && this.props.user.userName === null) {
-      this.props.history.push('home');
+      this.props.history.push('user');
     }
   }
 
@@ -81,7 +81,6 @@ class HomePage extends Component {
 
 
 
-<br/>
 
 
 <button onClick={this.logout} > Sign Out </button>
