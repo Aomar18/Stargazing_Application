@@ -74,37 +74,37 @@ class LocationForm extends Component {
                     <div>
                         <InputLabel>Title of location: </InputLabel>
                         <br />
-                        <Input value={this.state.title} type="text" onChange={this.handleChange} />
+                        <Input value={this.state.title} type="text" onChange={this.handleChange} name="title"/>
                     </div>
                     <br />
                     <div>
                         <InputLabel>Longitude: </InputLabel>
                         <br />
-                        <Input value={this.state.longitude} type="text" onChange={this.handleChange} />
+                        <Input value={this.state.longitude} type="text" onChange={this.handleChange} name="longitude" />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Latitude: </InputLabel>
                         <br />
-                        <Input value={this.state.latitude} type="text" onChange={this.handleChange} />
+                        <Input value={this.state.latitude} type="text" onChange={this.handleChange} name="latitude"/>
                     </div>
                     <br />
                     <div>
                         <InputLabel>Description: </InputLabel>
                         <br />
-                        <Input value={this.state.description} type="text" onChange={this.handleChange} />
+                        <Input value={this.state.description} type="text" onChange={this.handleChange} name="description" />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Location Address: </InputLabel>
                         <br />
-                        <Input type="text" value={this.state.address} onChange={this.handleChange} />
+                        <Input type="text" value={this.state.address} onChange={this.handleChange} name="address"/>
                     </div>
                     <br />
                     <div>
                         <InputLabel>Date: </InputLabel>
                         <br />
-                        <Input type="date" value={this.state.date} onChange={this.handleChange} />
+                        <Input type="date" value={this.state.date} onChange={this.handleChange} name="date" />
                     </div>
                     <br />
                         <ReactFilestack

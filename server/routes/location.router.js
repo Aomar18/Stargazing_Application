@@ -21,7 +21,9 @@ router.get('/', (req, res) => {
 //Location form -- routes POST 
 router.post('/', (req, res) => {
     if (req.isAuthenticated()) {
-        const query = `INSERT INTO "location" ("title","longitude","latitude","description","image_path", "person_id","address","date") VALUES ($1, $2, $3, $4,$5,$6,$7);`;
+        const query = `INSERT INTO "location" ("title","longitude","latitude","description",
+        "image_path", "person_id","address")
+         VALUES ($1, $2, $3, $4,$5,$6,$7);`;
         const locationToAdd = req.body;
         pool.query(query, [
         locationToAdd.title,
@@ -29,9 +31,9 @@ router.post('/', (req, res) => {
         locationToAdd.latitude,
         locationToAdd.description,
         locationToAdd.image_path,
-        locationToAdd.address,
-        locationToAdd.date,
-        req.user.id]).then((results) => {
+        req.user.id,
+        locationToAdd.address
+        ]).then((results) => {
             res.sendStatus(200);
         }).catch((error) => {
             console.log('Error posting new item', error);

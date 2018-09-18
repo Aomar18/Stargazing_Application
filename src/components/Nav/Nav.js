@@ -24,6 +24,12 @@ const Nav = () => (
         Create post (temp link)
           </Link>
           </span>
+          <br/>
+      <span className="links">
+      <Link to="/details">
+        Details post (temp link)
+          </Link>
+          </span>
 
   </div>
   </div >
