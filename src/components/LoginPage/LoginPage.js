@@ -60,6 +60,7 @@ class LoginPage extends Component {
     }
     return (<span />);
   
+
 }
 
 

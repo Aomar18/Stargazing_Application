@@ -17,12 +17,12 @@ body {
     padding: 5px;
     color: skyblue;
     width: 100%;
-    height: 150px;
+    height: 170px;
     
 }
 
 form {
-    background-color: #dbd5d5;
+    background-color: skyblue;
     width: 30%;
     height: 250px;
     margin: 20px auto;

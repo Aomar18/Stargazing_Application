@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link  } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 
+
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { triggerLogout } from '../../redux/actions/loginActions';
 
@@ -18,7 +19,7 @@ class HomePage extends Component {
 
   componentDidUpdate() {
     if (!this.props.user.isLoading && this.props.user.userName === null) {
-      this.props.history.push('user');
+      this.props.history.push('home');
     }
   }
 
@@ -44,10 +45,10 @@ class HomePage extends Component {
 <br/>
 
 <div>
-  <info>
+  <p>
     Stargazers is an application that allows users to yada yada..... 
 
-  </info>
+  </p>
 </div>
 
 <p>

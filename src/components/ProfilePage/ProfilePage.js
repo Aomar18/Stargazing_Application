@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
-
+import Paper from '@material-ui/core/Paper';
 
 const mapStateToProps = state => ({
   user: state.user,
@@ -32,16 +32,23 @@ class ProfilePage extends Component {
 
           <div className="card-container-pp">
             <span>
-              <div className="card">
-                favorite posts here....
+              <Paper>
+                <div className="card">
+                  favorite posts here....
 </div>
-
-              <div className="card">
-                favorite posts here....
+              </Paper>
+              <br/>
+              <Paper>
+                <div className="card">
+                  favorite posts here....
 </div>
-              <div className="card">
-                favorite posts here....
+              </Paper>
+              <br/>
+              <Paper>
+                <div className="card">
+                  favorite posts here....
 </div>
+              </Paper>
               <div className="card">
                 favorite posts here....
 </div>
@@ -74,7 +81,7 @@ class ProfilePage extends Component {
 
 
             <div> link to create new post page here... </div>
-           
+
             <Link to="/location">Create New Post</Link>
 
 

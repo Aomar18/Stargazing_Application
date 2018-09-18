@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 import Nav from '../../components/Nav/Nav';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
+// import ReactFilestack from 'filestack-react';
 
 const mapStateToProps = state => ({
 
@@ -23,10 +24,17 @@ class LocationForm extends Component {
             date: '',
 
         };
-
-
-
     }
+
+    // getImageURL = (result) => {
+    //     console.log('filestack submitted', result.filesUploaded);
+    //     alert('Image added!');
+    //     this.setState({
+    //         ...this.state,
+    //         image_path: result.filesUploaded[0].url
+    //     })
+    //     console.log(this.state.image_url);
+    // }
 
     handleChange = (event) => {
         this.setState({
@@ -39,7 +47,9 @@ class LocationForm extends Component {
         this.props.dispatch({ type: 'ADD_ITEM', payload: this.state });
     };
 
-
+    handleCancel = () => {
+        this.props.history.push('profile');
+    }
 
 
     render() {
@@ -51,32 +61,32 @@ class LocationForm extends Component {
                 <form className="locform" onSubmit={this.handleSubmit}>
                     <div>
                         <InputLabel>Title of location: </InputLabel>
-                        <br/>
+                        <br />
                         <Input value={this.state.title} type="text" onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Longitude: </InputLabel>
-                        <br/>
-                        <Input value={this.state.longitude} type="text" onChange={this.handleChange}/>
+                        <br />
+                        <Input value={this.state.longitude} type="text" onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Latitude: </InputLabel>
-                        <br/>
-                        <Input value={this.state.latitude} type="text" onChange={this.handleChange}/>
+                        <br />
+                        <Input value={this.state.latitude} type="text" onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Description: </InputLabel>
-                        <br/>
-                        <Input value={this.state.description} type="text"onChange={this.handleChange} />
+                        <br />
+                        <Input value={this.state.description} type="text" onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Location Address: </InputLabel>
-                       <br/>
-                        <Input type="text" value={this.state.address}  onChange={this.handleChange} />
+                        <br />
+                        <Input type="text" value={this.state.address} onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
@@ -85,16 +95,26 @@ class LocationForm extends Component {
                         <Input type="date" value={this.state.date} onChange={this.handleChange} />
                     </div>
                     <br />
-                    <Button type="submit"
-                        color="tertiary"
-                        variant="contained"
-                    >Submit
-                    </Button>
 
-                    <Link to="/profile">Cancel</Link>
+                    <span>
+                        <Button type="submit"
+                            color="primary"
+                            variant="contained"
+                        >Submit
+                    </Button>
+                    </span>
+                    <span>
+                        <Button color="secondary"
+                            variant="contained"
+                            onClick={this.handleCancel}>
+                            Cancel</Button>
+                    </span>
+
+
 
 
                 </form>
+
 
             </div>
 

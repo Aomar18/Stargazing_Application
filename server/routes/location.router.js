@@ -2,6 +2,8 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
+
+//Location form -- routes GET  
 router.get('/', (req, res) => {
     const query = `SELECT "location".*, "person"."id" as person_id, "person"."username"
                         FROM  "location"
@@ -15,11 +17,14 @@ router.get('/', (req, res) => {
     });
 });
 
+
+//Location form -- routes POST 
 router.post('/', (req, res) => {
     if (req.isAuthenticated()) {
         const query = `INSERT INTO "location" ("title","longitude","latitude","description","image_path", "person_id","address","date") VALUES ($1, $2, $3, $4,$5,$6,$7);`;
         const locationToAdd = req.body;
-        pool.query(query, [locationToAdd.title,
+        pool.query(query, [
+        locationToAdd.title,
         locationToAdd.longitude,
         locationToAdd.latitude,
         locationToAdd.description,
