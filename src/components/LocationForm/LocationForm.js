@@ -48,44 +48,44 @@ class LocationForm extends Component {
                 <Nav />
                 <h1> Create a Location Post</h1>
 
-                <form className="locform">
+                <form className="locform" onSubmit={this.handleSubmit}>
                     <div>
                         <InputLabel>Title of location: </InputLabel>
                         <br/>
-                        <Input type="text" />
+                        <Input value={this.state.title} type="text" onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Longitude: </InputLabel>
                         <br/>
-                        <Input type="text" />
+                        <Input value={this.state.longitude} type="text" onChange={this.handleChange}/>
                     </div>
                     <br />
                     <div>
                         <InputLabel>Latitude: </InputLabel>
                         <br/>
-                        <Input type="text" />
+                        <Input value={this.state.latitude} type="text" onChange={this.handleChange}/>
                     </div>
                     <br />
                     <div>
                         <InputLabel>Description: </InputLabel>
                         <br/>
-                        <Input type="text" />
+                        <Input value={this.state.description} type="text"onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Location Address: </InputLabel>
                        <br/>
-                        <Input type="text" />
+                        <Input type="text" value={this.state.address}  onChange={this.handleChange} />
                     </div>
                     <br />
                     <div>
                         <InputLabel>Date: </InputLabel>
                         <br />
-                        <Input type="date" />
+                        <Input type="date" value={this.state.date} onChange={this.handleChange} />
                     </div>
                     <br />
-                    <Button
+                    <Button type="submit"
                         color="tertiary"
                         variant="contained"
                     >Submit

@@ -12,7 +12,7 @@ return(<div>
    
     <Nav/>
     
-    <p>this is the admin page </p>
+    <p>This is the admin page </p>
 
 
 
