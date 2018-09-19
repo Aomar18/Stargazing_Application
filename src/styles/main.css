@@ -37,7 +37,7 @@ img {
 }
 
 form {
-    background-color: skyblue;
+    background-color: #003366;
     width: 30%;
     height: 250px;
     margin: 20px auto;
@@ -47,11 +47,11 @@ form {
 
 .locform {
     background-color: silver;
-    width: 35%;
     height: 800px;
     margin: 20px auto;
     padding: 25px;
     border-radius: 40px;
+
  
 }
 
@@ -137,7 +137,6 @@ p{
     text-decoration: none;
 
 }
-
 
 
 .card {

@@ -125,18 +125,23 @@ render() {
                     <br />
                     <Input value={this.state.NELM} type="text" onChange={this.handleChange} name="NELM" />
                 </div>
+                <br/>
                 <div>
-                    <InputLabel>Constellation Visible ? </InputLabel>
+                    <InputLabel>Are constellation visible ? </InputLabel>
                     <br />
                     <br/>
-                    <InputLabel> True: </InputLabel>
                     <input value="true" type="radio" onChange={this.handleRadioChange} name="constellations_visible" />
-                    <InputLabel>False:</InputLabel>
+                    <InputLabel>Yes</InputLabel>
+                    
+                    <br/>
+
                     <input value="false" type="radio" onChange={this.handleRadioChange} name="constellations_visible" />
+                   
+                    <InputLabel>No</InputLabel>
                 </div>
                 <div>
                     <br />
-                    <InputLabel> Name of Constellations ?</InputLabel>
+                    <InputLabel> List all visible constellations:</InputLabel>
                     <br />
                     <Input type="text" value={this.state.name_constellation} onChange={this.handleChange} name="name_constellation" />
                 </div>
