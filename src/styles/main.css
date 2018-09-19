@@ -40,6 +40,24 @@ form {
  
 }
 
+.bortle-scale-info {
+    text-align: center;
+    color: 
+}
+
+
+.NELM-info {
+    text-align: center;
+}
+
+
+TableHead {
+    font-size: 70px;
+}
+
+.table-intro {
+    font-style: italic;
+}
 
 input {
     margin: 5px;
