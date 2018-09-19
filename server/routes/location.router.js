@@ -21,18 +21,28 @@ router.get('/', (req, res) => {
 //Location form -- routes POST 
 router.post('/', (req, res) => {
     if (req.isAuthenticated()) {
-        const query = `INSERT INTO "location" ("title","longitude","latitude","description",
-        "image_path", "person_id","address")
-         VALUES ($1, $2, $3, $4,$5,$6,$7);`;
+        const query = `INSERT INTO "location" (
+        "title",
+        "longitude","latitude",
+        "description", "bortle_value", "nelm",
+        "constellations_visible","name_constellation",
+        "image_path", "person_id",
+         "userinput_date",  "address"
+        )
+         VALUES (
+        $1,$2,
+        $3,$4,$5,
+        $6,$7,
+        $8,$9,
+        $10,$11,$12);`;
         const locationToAdd = req.body;
         pool.query(query, [
         locationToAdd.title,
-        locationToAdd.longitude,
-        locationToAdd.latitude,
-        locationToAdd.description,
-        locationToAdd.image_path,
-        req.user.id,
-        locationToAdd.address
+        locationToAdd.longitude, locationToAdd.latitude,
+        locationToAdd.description,locationToAdd.bortle_value, locationToAdd.NELM,
+        locationToAdd.constellations_visible, locationToAdd.name_constellation,
+        locationToAdd.image_path,req.user.id,
+        locationToAdd.userinput_date,  locationToAdd.address
         ]).then((results) => {
             res.sendStatus(200);
         }).catch((error) => {
