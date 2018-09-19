@@ -8,18 +8,20 @@ import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-
+import Paper from '@material-ui/core/Paper';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { triggerLogout } from '../../redux/actions/loginActions';
 
 
 const mapStateToProps = state => ({
   user: state.user,
+  location: state.location
 });
 
 class HomePage extends Component {
   componentDidMount() {
     this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
+    this.props.dispatch({ type:'FETCH_LOCATION' });
   }
 
   componentDidUpdate() {
@@ -46,13 +48,14 @@ class HomePage extends Component {
 
           <div>
             <h2>
-              Stargazers is an application that provides you with a means to
+             *** Stargazers is an application that provides you with a means to..... ****
 
 
   </h2>
           </div>
 
           <p> static information about observatories - 4 posts GOES HERE!!</p>
+          <br/>
           <div className="bortle-scale-info">
             <p> The Bortle scale is a means to measure the brightness of the sky at night using a
   <br />
@@ -139,11 +142,23 @@ class HomePage extends Component {
           <br />
           <br />
 
-          <p>
-            -------------
-</p>
 
-          <p>user posts render here</p>
+
+
+          {this.props.location.location.map((post) => {
+            return (
+
+              <div key={post.id}>
+                <Paper >
+                  <div className="card">
+                    <h4>{post.title}</h4>
+                    <img src={post.image_path} alt={post.description} height="300px" width="300px" />
+                  </div>
+                </Paper>
+                <br />
+              </div>
+            )
+          })}
 
           <p>
 

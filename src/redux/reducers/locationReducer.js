@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-const locationReducer = (state = [], action) => {
+const location = (state = [], action) => {
     if (action.type === 'SET_LOCATION') {
         return action.payload;
     }
@@ -8,5 +8,5 @@ const locationReducer = (state = [], action) => {
 };
 
 export default combineReducers({
-    locationReducer,
+    location,
 });

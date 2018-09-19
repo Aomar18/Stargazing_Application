@@ -21,6 +21,21 @@ body {
     
 }
 
+h4 {
+    text-align: center;
+    font-family: cursive;
+    color: gold;
+    text-decoration: underline;
+
+}
+
+img {
+    text-align: center;
+    margin-left: 150%;
+    
+    
+}
+
 form {
     background-color: skyblue;
     width: 30%;
@@ -123,11 +138,13 @@ p{
 
 }
 
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; 
-    height: 200px;
+    height: 400px;
     width: 200px;
     background-color: gray;
     display: inline-block;
