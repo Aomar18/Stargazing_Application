@@ -74,7 +74,7 @@ class HomePage extends Component {
 <p>user posts render here</p>
 
 <p>
-  -------------
+
 </p>
 <br/>
 <br/>

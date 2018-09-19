@@ -12,8 +12,15 @@ return(<div>
    
     <Nav/>
     
+
+    -----------
+    
     <p>This is the Details page </p>
 
+
+    -----------------
+
+    <p> render posts here </p>
 
 
 
