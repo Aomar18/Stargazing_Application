@@ -44,6 +44,7 @@ router.post('/', (req, res) => {
         locationToAdd.image_path,req.user.id,
         locationToAdd.userinput_date,  locationToAdd.address
         ]).then((results) => {
+            console.log(req.body);
             res.sendStatus(200);
         }).catch((error) => {
             console.log('Error posting new item', error);
@@ -63,11 +64,11 @@ router.get('/:id', (req, res) => {
                         FROM  "location"
                         JOIN "person"
                         ON "person"."id" = "location"."person_id"
-                        WHERE "person"."id" = $1;`;
-        pool.query(query, [req.params.id]).then((results) => {
+                        WHERE "person_id" = $1;`;
+        pool.query(query, [req.user.id]).then((results) => {
             res.send(results.rows); 
         }).catch((error) => {
-            console.log('Error getting items by user id', error);
+            console.log('Error getting posts by user id', error);
             res.sendStatus(500);
         });
     } else {

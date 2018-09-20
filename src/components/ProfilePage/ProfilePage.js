@@ -12,9 +12,12 @@ const mapStateToProps = state => ({
 });
 
 class ProfilePage extends Component {
+
   componentDidMount() {
     this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
-    this.props.dispatch({ type: 'FETCH_LOCATION' })
+    // this.getLocation();
+    this.getById();
+    this.props.dispatch({ type: 'BY_ID'})
   }
 
   componentDidUpdate() {
@@ -23,13 +26,24 @@ class ProfilePage extends Component {
     }
   }
 
+
+  getLocation = () => {
+    this.props.dispatch({ type: 'FETCH_LOCATION' })
+  }
+
+
+  getById = () => {
+    console.log('in getById, user id:')
+    this.props.dispatch({ type: 'BY_ID'})
+  }
+
   render() {
     let content = null;
 
     if (this.props.user.userName) {
       content = (
         <div>
-
+          
 
           <h1> Profile Page </h1>
 
@@ -40,20 +54,20 @@ class ProfilePage extends Component {
                 <div key={post.id}>
                   <Paper >
                     <div className="card">
-                  <span>
-                    <p>Name of location:</p>
-                      <h4>{post.title}</h4>
-                    <p>Description:</p>
-                      <h4>{post.description}</h4>
-                   <h4><p>Bortle Scale Value:</p>{post.bortle_value}</h4>
-                    
-                      <img src={post.image_path} alt={post.description} height="400px" width="400px" />
-                   </span>
+                      <span>
+                        <p>Name of location:</p>
+                        <h4>{post.title}</h4>
+                        <p>Description:</p>
+                        <h4>{post.description}</h4>
+                        <h4><p>Bortle Scale Value:</p>{post.bortle_value}</h4>
+
+                        <img src={post.image_path} alt={post.description} height="400px" width="400px" />
+                      </span>
                     </div>
 
 
                   </Paper>
-                <br/>
+                  <br />
                 </div>
               )
             })}

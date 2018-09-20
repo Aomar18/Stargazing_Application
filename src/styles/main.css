@@ -14,6 +14,8 @@ body {
 
 .instructions {
     background-image: url("../images/tree.jpg");
+    background-size: contain;
+    background-repeat: norepeat;
     padding: 5px;
     color: skyblue;
     width: 100%;
@@ -47,7 +49,7 @@ form {
 
 .locform {
     background-color: silver;
-    height: 800px;
+    height: 850px;
     margin: 20px auto;
     padding: 25px;
     border-radius: 40px;
