@@ -6,7 +6,7 @@ const Nav = () => (
     <div className="link">
 
       <span className="links">
-        <Link to="/home">
+        <Link to="/user">
           Home
           </Link>
       </span>
@@ -22,6 +22,12 @@ const Nav = () => (
       <span className="links">
       <Link to="/location">
         Create post (temp link)
+          </Link>
+          </span>
+          <br/>
+      <span className="links">
+      <Link to="/details">
+        Details post (temp link)
           </Link>
           </span>
 
