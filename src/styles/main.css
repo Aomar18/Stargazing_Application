@@ -6,6 +6,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+.welcome {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+.welcomeButton {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+
 .instructions h1 {
     font-size: 34px;
     font-weight: 700;
@@ -14,8 +27,6 @@ body {
 
 .instructions {
     background-image: url("../images/tree.jpg");
-    background-size: contain;
-    background-repeat: norepeat;
     padding: 5px;
     color: skyblue;
     width: 100%;
@@ -30,6 +41,11 @@ h4 {
     text-decoration: underline;
 
 }
+
+th:hover{
+    font-size: 40px;
+}
+
 
 img {
     text-align: center;

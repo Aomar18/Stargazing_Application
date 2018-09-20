@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
-
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
@@ -42,7 +41,7 @@ class HomePage extends Component {
         <div>
 
           <h2>
-            Welcome, {this.props.user.userName}hmed!
+            Welcome, {this.props.user.userName}
             </h2>
           <br />
 
@@ -82,9 +81,9 @@ class HomePage extends Component {
             {/* TABLE HEADER INFORMATION */}
 
             <TableHead>
-              <TableCell>Bortle Scale value:</TableCell>
-              <TableCell>Description</TableCell>
-              <TableCell>NELM</TableCell>
+              <TableCell><i>Bortle Scale value:</i></TableCell>
+              <TableCell><i>Description</i></TableCell>
+              <TableCell><i>NELM</i></TableCell>
             </TableHead>
 
 
