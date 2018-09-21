@@ -5,7 +5,7 @@ import Nav from '../../components/Nav/Nav';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Dialog from '@material-ui/core/Dialog';
+// import Link from '@material-ui/core/Link';
 
 
 
@@ -20,7 +20,7 @@ class ProfilePage extends Component {
     this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
     // this.getLocation();
     this.getById();
-    this.props.dispatch({ type: 'BY_ID'})
+    this.props.dispatch({ type: 'BY_ID' })
   }
 
   componentDidUpdate() {
@@ -37,8 +37,12 @@ class ProfilePage extends Component {
 
   getById = () => {
     console.log('in getById, user id:')
-    this.props.dispatch({ type: 'BY_ID'})
+    this.props.dispatch({ type: 'BY_ID' })
   }
+
+  // goToDetails = () => {
+  //   <Link to={`/details/${post.id}`}>HELLO</Link>
+  // }
 
   render() {
     let content = null;
@@ -46,7 +50,9 @@ class ProfilePage extends Component {
     if (this.props.user.userName) {
       content = (
         <div>
+
           
+
 
           <h1> Profile Page </h1>
 
@@ -55,24 +61,29 @@ class ProfilePage extends Component {
               return (
 
                 <div key={post.id}>
-                <Grid container spacing={8}></Grid>
-                <Grid item xs={4}>
-                  <Paper >
-                    <div className="card">
-                      <span>
-                        <p>Name of location:{post.title}</p>
-                        <p>Description:{post.description}</p>
-                        <p>Bortle Scale Value:{post.bortle_value}</p>
+                  <Grid container spacing={8}>
+                    <Grid item xs={4}>
+                      <Paper >
+                        <div className="card">
+                          <span>
+                            <p>Name of location:{post.title}</p>
+                            <p>Description:{post.description}</p>
+                            <p>Bortle Scale Value:{post.bortle_value}</p>
 
-                        <img src={post.image_path} alt={post.description} height="200px" width="200px" />
-                      </span>
-                    </div>
+                            {/* <Link to={`/details/${post.id}`}>POSTPOSTPOST</Link> */}
 
 
-                  </Paper>
+                            <img onClick={this.goToDetails} src={post.image_path} alt={post.description} height="200px" width="200px" />
+
+                          </span>
+                        </div>
+
+
+                      </Paper>
+                    </Grid>
                   </Grid>
-                  <br/>
-                  
+                  <br />
+
                   <br />
                 </div>
               )

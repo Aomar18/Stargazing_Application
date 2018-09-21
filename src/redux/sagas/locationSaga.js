@@ -5,7 +5,7 @@ import axios from 'axios';
 //GET DATA
 function* fetchLocation() {
   try {
-    const LocationResponse = yield call(axios.get, '/api/location')
+    const LocationResponse = yield call(axios.get, '/api/location/home')
 
     const responseAction = { type: 'SET_LOCATION', payload: LocationResponse.data };
     yield put(responseAction);
@@ -18,15 +18,25 @@ function* fetchLocation() {
 
 //GET BY ID 
 function* byId(action) {
-  try {
-    const response = yield call(axios.get, `/api/location/profile`);
-    const responseAction = { type: 'SET_LOCATION', payload: response.data };
-    yield put(responseAction);
+  // try {
+  //   const response = yield call(axios.get, `/api/location/profile`);
+  //   const responseAction = { type: 'SET_LOCATION', payload: response.data };
+  //   yield put(responseAction);
 
-  }
-  catch (error) {
-    console.log('ERROR in get posts in ID sagas');
-  }
+  // }
+  // catch (error) {
+  //   console.log('ERROR in get posts in ID sagas');
+  // }
+  try {
+      const response = yield call(axios.get, `/api/location/profile`);
+      yield put({type: 'SET_LOCATION' , payload:response.data})
+      // const responseAction = { type: 'SET_LOCATION', payload: response.data };
+      // yield put(responseAction);
+  
+    }
+    catch (error) {
+      console.log('ERROR in get posts in ID sagas');
+    }
 }
 
 //ADD DATA TO DB

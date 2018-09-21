@@ -47,7 +47,7 @@ const App = () => (
           component={AdminPage}
         /> 
         <Route
-          path="/details"
+          path="/details/:id"
           component={DetailsPage}
         /> 
 

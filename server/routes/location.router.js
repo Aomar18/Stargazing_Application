@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 //Location form -- routes GET  
-router.get('/', (req, res) => {
+router.get('/home', (req, res) => {
     const query = `SELECT "location".*, "person"."id" as person_id, "person"."username"
                         FROM  "location"
                         JOIN "person"
@@ -58,7 +58,7 @@ router.post('/', (req, res) => {
 
 //GET BY ID
 
-router.get('/:id', (req, res) => {
+router.get('/profile', (req, res) => {
     if(req.isAuthenticated()){
         const query = `SELECT "location".*, "person"."id" as person_id, "person"."username"
                         FROM  "location"
