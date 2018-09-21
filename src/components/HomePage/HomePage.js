@@ -42,14 +42,14 @@ class HomePage extends Component {
 
           <h2>
             Welcome, {this.props.user.userName}
-            </h2>
+          </h2>
           <br />
 
           <div>
             <h2>
               *** Stargazers is an application that provides you with a means to..... ****
- 
- 
+
+
   </h2>
           </div>
 
@@ -77,70 +77,72 @@ class HomePage extends Component {
 
           <div className="table-intro"> Below is a table with detail on how the scaling works:</div>
           <br />
-          <Table color="secondary">
-            {/* TABLE HEADER INFORMATION */}
+          <Paper>
+            <Table color="secondary">
+              {/* TABLE HEADER INFORMATION */}
 
-            <TableHead>
-              <TableCell><i>Bortle Scale value:</i></TableCell>
-              <TableCell><i>Description</i></TableCell>
-              <TableCell><i>NELM</i></TableCell>
-            </TableHead>
+              <TableHead>
+                <TableCell><i>Bortle Scale value:</i></TableCell>
+                <TableCell><i>Description</i></TableCell>
+                <TableCell><i>NELM</i></TableCell>
+              </TableHead>
 
 
-            {/* TABLE BODY STARTS HERE */}
-            <TableBody>
-              <TableRow>
-                <TableCell><h1>1</h1></TableCell>
-                <TableCell>Excellent Dark-Sky Site </TableCell>
-                <TableCell>7.6–8.0</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>2</h1></TableCell>
-                <TableCell>Typical Truly Dark Site</TableCell>
-                <TableCell>7.1–7.5</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>3</h1></TableCell>
-                <TableCell>Rural Sky</TableCell>
-                <TableCell>6.6–7.0</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>4</h1></TableCell>
-                <TableCell>Rural-Subarban Transitory Site</TableCell>
-                <TableCell>6.1–6.5</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>5</h1></TableCell>
-                <TableCell>Suburban Sky</TableCell>
-                <TableCell>5.6–6.0</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>6</h1></TableCell>
-                <TableCell>Bright Suburban Sky</TableCell>
-                <TableCell>5.1-5.5</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>7</h1></TableCell>
-                <TableCell>Suburban/urban transition</TableCell>
-                <TableCell>4.6-5.0</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>8</h1></TableCell>
-                <TableCell>City sky</TableCell>
-                <TableCell>4.1-4.5</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><h1>9</h1></TableCell>
-                <TableCell>Inner-City Sky</TableCell>
-                <TableCell>4.0</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+              {/* TABLE BODY STARTS HERE */}
+              <TableBody>
+                <TableRow>
+                  <TableCell><h1>1</h1></TableCell>
+                  <TableCell>Excellent Dark-Sky Site </TableCell>
+                  <TableCell>7.6–8.0</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>2</h1></TableCell>
+                  <TableCell>Typical Truly Dark Site</TableCell>
+                  <TableCell>7.1–7.5</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>3</h1></TableCell>
+                  <TableCell>Rural Sky</TableCell>
+                  <TableCell>6.6–7.0</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>4</h1></TableCell>
+                  <TableCell>Rural-Subarban Transitory Site</TableCell>
+                  <TableCell>6.1–6.5</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>5</h1></TableCell>
+                  <TableCell>Suburban Sky</TableCell>
+                  <TableCell>5.6–6.0</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>6</h1></TableCell>
+                  <TableCell>Bright Suburban Sky</TableCell>
+                  <TableCell>5.1-5.5</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>7</h1></TableCell>
+                  <TableCell>Suburban/urban transition</TableCell>
+                  <TableCell>4.6-5.0</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>8</h1></TableCell>
+                  <TableCell>City sky</TableCell>
+                  <TableCell>4.1-4.5</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><h1>9</h1></TableCell>
+                  <TableCell>Inner-City Sky</TableCell>
+                  <TableCell>4.0</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Paper>
 
           <br />
           <br />
           <br />
-
+          <Link to="/location">Create New Post</Link>
 
 
 
@@ -148,13 +150,14 @@ class HomePage extends Component {
             return (
 
               <div key={post.id}>
-                <Paper >
+                <div className="outercard">
                   <div className="card">
                     <h4>{post.title}</h4>
                     <img src={post.image_path} alt={post.description} height="300px" width="300px" />
                   </div>
-                </Paper>
-                <br />
+
+                  <br />
+                </div>
               </div>
             )
           })}
@@ -164,7 +167,7 @@ class HomePage extends Component {
           </p>
           <br />
           <br />
-          <Link to="/location">Create New Post</Link>
+
 
 
 

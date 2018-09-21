@@ -63,7 +63,7 @@ class ProfilePage extends Component {
                 <div key={post.id}>
                   <Grid container spacing={8}>
                     <Grid item xs={4}>
-                      <Paper >
+                    <div className="outercard">
                         <div className="card">
                           <span>
                             <p>Name of location:{post.title}</p>
@@ -77,9 +77,8 @@ class ProfilePage extends Component {
 
                           </span>
                         </div>
+                      </div>
 
-
-                      </Paper>
                     </Grid>
                   </Grid>
                   <br />
