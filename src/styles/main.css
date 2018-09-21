@@ -15,9 +15,15 @@ body {
 .welcomeButton {
     position: absolute;
     right: 40px;
-    top: 30px;
+    top: 40px;
 }
 
+.card:hover {    
+    display:flex;
+    justify-content: space-between;
+    
+
+}
 
 .instructions h1 {
     font-size: 34px;
@@ -48,10 +54,7 @@ th:hover{
 
 
 img {
-    text-align: center;
-    margin-left: 150%;
-    
-    
+    text-align: center;   
 }
 
 form {
