@@ -1,5 +1,16 @@
 html {
-    background-color: gray;
+    background: linear-gradient( to top right,
+        #348AC7,
+        #348AC7,
+        #348AC7,
+        #7474BF,
+        #7474BF
+        );
+}
+
+.lead {
+    text-align: center;
+    color: white; 
 }
 
 body {
@@ -26,17 +37,25 @@ body {
     width: 400px;
     background-color: gray;
     display: inline-block;
+    flex-wrap: wrap;
     margin: 10px;
+}
+
+.card-container{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 
 .outercard {
     background-color: darkblue;
     height: 420px;
     width: 420px;
-    justify-content: baseline;
-    flex-wrap: nowrap;
-    flex-direction: row;
     margin-bottom: 40px;
+    margin-right: 40px;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
 
@@ -53,21 +72,29 @@ img {
 }
 
 .instructions h1 {
-    font-size: 34px;
+    font-size: 54px;
     font-weight: 700;
     font-family: cursive;
 }
 
 .instructions {
-    background-image: url("../images/tree.jpg");
+    background-image: url("../images/starwatch2.jpg");
+    background-repeat: no-repeat;
+    background: linear-gradient( to top right,
+ black,
+    black,
+    black,
+    #348AC7,
+    #7474BF
+    );
     padding: 5px;
     color: skyblue;
     width: 100%;
-    height: 170px;
+    height: 240px;
     
 }
 
-h4 {
+.gold {
     text-align: center;
     font-family: cursive;
     color: gold;
@@ -153,7 +180,8 @@ input[type="submit"] {
 }
 
 .navbar {
-  background-color: #003366;
+    background-image: url("../images/starwatch2.jpg");
+  /* background-color: #003366; */
   width: 100%;
   border-radius: 0px;
 }
@@ -172,7 +200,8 @@ input[type="submit"] {
 }
 
 p{
-    color: white;
+    color: purple;
+    font-family: bold;
 
 }
 

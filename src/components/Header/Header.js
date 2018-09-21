@@ -21,7 +21,7 @@ class Header extends Component {
     if (this.props.user.userName) {
       welcome = (
         <div>
-          <div className="welcome"> hello , {this.props.user.userName} </div>
+          <div className="welcome"> hello , {this.props.user.userName} </div> 
           <button className="welcomeButton" onClick={this.logout}>Log out</button>
           
         </div>
@@ -32,7 +32,7 @@ class Header extends Component {
     return (
       <div className="instructions">
         <div>
-          <h1 className="lead"> Vantage Point </h1>
+          <h1 className="lead"> ▁ ▂ ▄ ▅ ▆ ▇ █ Vantage Point █ ▇ ▆ ▅ ▄ ▂ ▁ </h1>
 
           {welcome}
 

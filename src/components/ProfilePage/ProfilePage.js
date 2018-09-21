@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // import Link from '@material-ui/core/Link';
 

@@ -47,7 +47,7 @@ class HomePage extends Component {
 
           <div>
             <h2>
-              *** Stargazers is an application that provides you with a means to..... ****
+              *** Vantage Point is an application that provides you with a means to..... ****
 
 
   </h2>
@@ -143,21 +143,26 @@ class HomePage extends Component {
           <br />
           <br />
           <Link to="/location">Create New Post</Link>
+          <br />
 
 
 
           {this.props.location.location.map((post) => {
             return (
-
+              <div className="card-container">
               <div key={post.id}>
+              
                 <div className="outercard">
                   <div className="card">
-                    <h4>{post.title}</h4>
+                  <h4>
+                    Location:   <span className="gold">{post.title}</span>
+                    </h4>
                     <img src={post.image_path} alt={post.description} height="300px" width="300px" />
                   </div>
 
                   <br />
                 </div>
+              </div>
               </div>
             )
           })}

@@ -21,15 +21,15 @@ const Nav = () => (
 
       <span className="links">
       <Link to="/location">
-        Create post (temp link)
+        Create post
           </Link>
           </span>
           <br/>
-      <span className="links">
+      {/* <span className="links">
       <Link to="/details">
         Details post (temp link)
           </Link>
-          </span>
+          </span> */}
 
   </div>
   </div >
