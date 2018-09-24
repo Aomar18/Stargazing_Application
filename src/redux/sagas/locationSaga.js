@@ -1,4 +1,4 @@
-import { put, call, takeLatest } from 'redux-saga/effects';
+import { put, call, takeLatest , takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
 
@@ -50,12 +50,23 @@ function* addItem(action) {
   }
 }
 
+function* deletePost(action) {
+  console.log(action.payload);
+      try {
+        yield call(axios.delete, `/profile/?id=` + action.payload.id);
+        yield put({ type: 'DELETE_POST'})
+      } catch(error){
+        alert('unable to remove post');
+      }
+  }
 
 function* locationSaga() {
   yield takeLatest('FETCH_LOCATION', fetchLocation);
   yield takeLatest('ADD_ITEM', addItem);
   yield takeLatest('BY_ID', byId);
+  yield takeEvery('DELETE_POST', deletePost);
 }
+
 
 
 export default locationSaga;

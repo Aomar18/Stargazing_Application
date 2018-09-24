@@ -7,7 +7,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
 // import tr from '@material-ui/core/tr';
 import TableCell from '@material-ui/core/TableCell';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { triggerLogout } from '../../redux/actions/loginActions';
 
@@ -145,7 +145,7 @@ class HomePage extends Component {
           <Link to="/location">Create New Post</Link>
           <br />
 
-
+        
 
           {this.props.location.location.map((post) => {
             return (

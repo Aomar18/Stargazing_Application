@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 // import Link from '@material-ui/core/Link';
+
 
 
 
@@ -39,6 +41,18 @@ class ProfilePage extends Component {
     this.props.dispatch({ type: 'BY_ID' })
   }
 
+  deletePost = (postId) => {
+    console.log('Delete post:', postId);
+    const action = {type:'DELETE_GARDEN',payload:postId};
+    console.log('action' , action);
+    this.props.dispatch(action);
+};
+
+  handleClick = (event) => {
+    console.log('Post', event.target.value);
+    this.props.dispatch({ type: 'DELETE_POST', payload: this.location });
+    
+  }
   // goToDetails = () => {
   //   <Link to={`/details/${post.id}`}>HELLO</Link>
   // }
@@ -50,7 +64,7 @@ class ProfilePage extends Component {
       content = (
         <div>
 
-          
+
 
 
           <h1> Profile Page </h1>
@@ -62,7 +76,7 @@ class ProfilePage extends Component {
                 <div key={post.id}>
                   <Grid container spacing={8}>
                     <Grid item xs={4}>
-                    <div className="outercard">
+                      <div className="outercard">
                         <div className="card">
                           <span>
                             <p>Name of location:{post.title}</p>
@@ -73,7 +87,8 @@ class ProfilePage extends Component {
 
 
                             <img onClick={this.goToDetails} src={post.image_path} alt={post.description} height="200px" width="200px" />
-
+                            <br/>
+                            <Button onClick={this.handleClick}>Remove Post </Button>
                           </span>
                         </div>
                       </div>

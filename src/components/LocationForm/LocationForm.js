@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import ReactFilestack from 'filestack-react';
 
 const mapStateToProps = state => ({
-    state
+    location: state.location
 
 });
 

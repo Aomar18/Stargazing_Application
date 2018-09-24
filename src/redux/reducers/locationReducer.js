@@ -7,6 +7,7 @@ const location = (state = [], action) => {
     return state
 };
 
+
 export default combineReducers({
     location,
 });

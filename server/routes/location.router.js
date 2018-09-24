@@ -77,6 +77,14 @@ router.get('/profile', (req, res) => {
 });
 
 
-
+router.delete('/', (req, res) => {
+    const queryText = `DELETE FROM "location" WHERE "person_id" = $1;`;
+    pool.query(queryText, [req.query.id])
+      .then(() => { res.sendStatus(200); })
+      .catch((error) => {
+        console.log('Error completing SELECT location query', error);
+        res.sendStatus(500);
+      });
+  });
 
 module.exports = router;
