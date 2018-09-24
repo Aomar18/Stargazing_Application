@@ -1,16 +1,21 @@
 html {
-    background: linear-gradient( to top right,
+    background-image: url('../images/tree.jpg');
+    background-repeat: no-repeat; 
+    background: linear-gradient( to bottom left,
+    black,
+    black,
         #348AC7,
         #348AC7,
         #348AC7,
         #7474BF,
         #7474BF
-        );
+        ); 
 }
 
 .lead {
     text-align: center;
-    color: white; 
+    color:white;
+    font-family: 'Jura', sans-serif;
 }
 
 body {
@@ -74,18 +79,20 @@ img {
 .instructions h1 {
     font-size: 54px;
     font-weight: 700;
-    font-family: cursive;
 }
 
 .instructions {
-    background-image: url("../images/starwatch2.jpg");
-    background-repeat: no-repeat;
+    /* background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png"); */
+    /* background-repeat: no-repeat;  */
+    /* background-position: center; */
     background: linear-gradient( to top right,
- black,
+     black,
     black,
     black,
     #348AC7,
-    #7474BF
+    #7474BF,
+    black,
+    white
     );
     padding: 5px;
     color: skyblue;
@@ -93,6 +100,13 @@ img {
     height: 240px;
     
 }
+
+tr:nth-child(even) {
+    background: rgba(204, 204, 204, 0.384);
+ }
+ tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.185);
+ }
 
 .gold {
     text-align: center;

@@ -5,7 +5,7 @@ import Nav from '../../components/Nav/Nav';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+// import tr from '@material-ui/core/tr';
 import TableCell from '@material-ui/core/TableCell';
 import Paper from '@material-ui/core/Paper';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
@@ -77,7 +77,7 @@ class HomePage extends Component {
 
           <div className="table-intro"> Below is a table with detail on how the scaling works:</div>
           <br />
-          <Paper>
+          
             <Table color="secondary">
               {/* TABLE HEADER INFORMATION */}
 
@@ -90,54 +90,54 @@ class HomePage extends Component {
 
               {/* TABLE BODY STARTS HERE */}
               <TableBody>
-                <TableRow>
+                <tr>
                   <TableCell><h1>1</h1></TableCell>
                   <TableCell>Excellent Dark-Sky Site </TableCell>
                   <TableCell>7.6–8.0</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>2</h1></TableCell>
                   <TableCell>Typical Truly Dark Site</TableCell>
                   <TableCell>7.1–7.5</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>3</h1></TableCell>
                   <TableCell>Rural Sky</TableCell>
                   <TableCell>6.6–7.0</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>4</h1></TableCell>
                   <TableCell>Rural-Subarban Transitory Site</TableCell>
                   <TableCell>6.1–6.5</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>5</h1></TableCell>
                   <TableCell>Suburban Sky</TableCell>
                   <TableCell>5.6–6.0</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>6</h1></TableCell>
                   <TableCell>Bright Suburban Sky</TableCell>
                   <TableCell>5.1-5.5</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>7</h1></TableCell>
                   <TableCell>Suburban/urban transition</TableCell>
                   <TableCell>4.6-5.0</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>8</h1></TableCell>
                   <TableCell>City sky</TableCell>
                   <TableCell>4.1-4.5</TableCell>
-                </TableRow>
-                <TableRow>
+                </tr>
+                <tr>
                   <TableCell><h1>9</h1></TableCell>
                   <TableCell>Inner-City Sky</TableCell>
                   <TableCell>4.0</TableCell>
-                </TableRow>
+                </tr>
               </TableBody>
             </Table>
-          </Paper>
+          
 
           <br />
           <br />

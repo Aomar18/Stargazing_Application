@@ -32,7 +32,7 @@ class Header extends Component {
     return (
       <div className="instructions">
         <div>
-          <h1 className="lead"> ▁ ▂ ▄ ▅ ▆ ▇ █ Vantage Point █ ▇ ▆ ▅ ▄ ▂ ▁ </h1>
+          <h1 className="lead">▁ ▂ ▄ ▅ ▆ ▇ █ vαntαgє pσínt █ ▇ ▆ ▅ ▄ ▂ ▁</h1>
 
           {welcome}
 
