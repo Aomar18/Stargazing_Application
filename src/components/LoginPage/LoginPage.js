@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { triggerLogin, formError, clearError } from '../../redux/actions/loginActions';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
-
+import Button from '@material-ui/core/Button';
 
 const mapStateToProps = state => ({
   user: state.user,
@@ -69,10 +69,10 @@ class LoginPage extends Component {
       <div>
 
       
-        <div className="container">
+        <div className="login-container">
 
           {this.renderAlert()}
-          <form onSubmit={this.login}>
+          <form className="login-form" onSubmit={this.login}>
             <h1>Login</h1>
             <div>
               <label htmlFor="username">
@@ -97,11 +97,14 @@ class LoginPage extends Component {
               </label>
             </div>
             <div>
-              <input
+              <Button
                 type="submit"
                 name="submit"
                 value="Log In"
-              />
+                color="primary"
+                variant="contained"
+              >Submit</Button>
+              
               <Link to="/register">Register</Link>
             </div>
           </form>
