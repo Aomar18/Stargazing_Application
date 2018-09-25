@@ -1,5 +1,5 @@
 
-
+   
 .home-text {
 font-size: 15px;
 font-family: cursive;
@@ -7,17 +7,12 @@ font-family: cursive;
 }
 
 
-
-
-
 canvas {
     background-color: black;
     position: absolute;
     z-index: -10;
     height: 100%;
-    width: 100%;
-    
-    
+    width: 100%;   
 }
  
 
@@ -26,31 +21,86 @@ canvas {
     top: 0;
     left: 0;
     z-index: 100;
-  }
+  
+}
 
 
-   
 
-.lead {
+body {
+	padding-top: 3em;
+}
+
+.chrome {
+    /* gradient:(
+        linear, left top, 
+         right top, 
+         from(#222), to(#222), 
+    color-stop(0.5, #fff)) 0 0 no-repeat; */
+    background-image:
+     linear-gradient(-40deg,
+      transparent 0%,
+      transparent 40%,
+      #fff 50%, 
+      transparent 60%, 
+      transparent 100%);
+  
+    color:
+     rgba(255, 255, 255, 0.3);;
+    background-clip:
+     mytitleanimation;
+    animation-name:
+     shine;
+    animation-duration: 
+    10s;
+    animation-iteration-count: 
+    infinite;
+    text-shadow:
+     0 0px 0px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes shine {
+	0%, 10% {
+		background-position: -1000px;
+	}
+	20% {
+		background-position: top left;
+	}
+	90% {
+		background-position: top right;
+	}
+	100% {
+		background-position: 1000px;
+	}
+}
+
+
+
+
+.chrome {
     text-align: center;
-    color:white;
     font-family: 'Jura', sans-serif;
 }
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .welcome {
+    font-size: 20px;
+    font-family: cursive;
     position: absolute;
-    right: 40px;
-    top: 20px;
+    right: 140px;
+    top: 200px;
 }
 
 .welcomeButton {
     position: absolute;
     right: 40px;
-    top: 40px;
+    top: 200px;
+    border-radius: 40px;
+    background-color: black;
+    color: silver;
 }
 
 .card {
@@ -105,6 +155,7 @@ img {
 .instructions h1 {
     font-size: 54px;
     font-weight: 700;
+    
 }
 
 .instructions {
@@ -112,11 +163,16 @@ img {
     /* background-repeat: no-repeat;  */
     /* background-position: center; */
     background: linear-gradient( to top right,
+    white,
+    black,
      black,
     black,
     black,
+    green,
+    green,
     #348AC7,
     #7474BF,
+    black,
     black,
     white
     );
@@ -148,13 +204,22 @@ th:hover{
 }
 
 .login-form {
-background-image: url('../images/tree.jpg');
+background-image: url('../images/nebula.jpg');
 text-align: center;
+font-family: 'Jura';
 color: white;
 width: 500px;
 border-radius: 40px;
 }
 
+.register-form  {
+background-image: url('../images/tree.jpg');
+text-align: center;
+color: white;
+font-family: 'Jura';
+width: 500px;
+border-radius: 40px;
+}
 
 img {
     text-align: center;   

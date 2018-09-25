@@ -21,7 +21,7 @@ const Nav = () => (
 
       <span className="links">
       <Link to="/location">
-        Create post
+        Create A Post
           </Link>
           </span>
           <br/>

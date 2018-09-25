@@ -63,6 +63,10 @@ class LoginPage extends Component {
 
   }
 
+  handleRegister = () => {
+    this.props.history.push('register');
+  }
+
 
   render() {
     return (
@@ -105,7 +109,11 @@ class LoginPage extends Component {
                 variant="contained"
               >Submit</Button>
               
-              <Link to="/register">Register</Link>
+              <Button variant="contained" 
+              onClick={this.handleRegister}>
+              Register
+              </Button>
+              
             </div>
           </form>
         </div>

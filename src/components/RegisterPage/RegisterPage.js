@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 class RegisterPage extends Component {
   constructor(props) {
@@ -65,11 +66,15 @@ class RegisterPage extends Component {
     return (<span />);
   }
 
+  handleCancel = () => {
+    this.props.history.push('home');
+  }
+
   render() {
     return (
       <div>
         {this.renderAlert()}
-        <form onSubmit={this.registerUser}>
+        <form className="register-form" onSubmit={this.registerUser}>
           <h1>Register User</h1>
           <div>
             <label htmlFor="username">
@@ -94,12 +99,15 @@ class RegisterPage extends Component {
             </label>
           </div>
           <div>
-            <input
+            <Button
               type="submit"
               name="submit"
               value="Register"
-            />
-            <Link to="/home">Cancel</Link>
+              variant="contained"
+          >Register </Button>
+
+            <Button color="secondary"
+                    variant="contained" onClick={this.handleCancel}>Cancel</Button>
           </div>
         </form>
       </div>

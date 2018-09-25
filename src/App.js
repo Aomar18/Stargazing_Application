@@ -141,10 +141,6 @@ const App = () => (
           component={LocationForm}
         />
         <Route
-          path="/admin"
-          component={AdminPage}
-        /> 
-        <Route
           path="/details/:id"
           component={DetailsPage}
         /> 
