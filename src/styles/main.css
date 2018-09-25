@@ -31,6 +31,7 @@ body {
 }
 
 .chrome {
+    margin-top: 80px;
     /* gradient:(
         linear, left top, 
          right top, 
@@ -184,20 +185,24 @@ img {
     /* background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png"); */
     /* background-repeat: no-repeat;  */
     /* background-position: center; */
-    background: linear-gradient( to top right,
+    background:
+     /* linear-gradient( to top right, 
     white,
-    black,
-     black,
-    black,
-    black,
-    green,
-    green,
+    black,black,black,black,
+    green, green,
     #348AC7,
     #7474BF,
-    black,
-    black,
+    black,black,
     white
-    );
+    ); */
+    radial-gradient( 
+        white,
+        black,
+        black,
+        black,
+        black,
+        black
+        ); 
     padding: 5px;
     color: skyblue;
     width: 100%;
@@ -220,7 +225,7 @@ tr:nth-child(even) {
 
 }
 
-th:hover{
+i {
     color: white;
     font-size: 40px;
 }

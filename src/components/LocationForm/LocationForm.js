@@ -61,13 +61,14 @@ class LocationForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.dispatch({ type: 'ADD_ITEM', payload: this.state });
+        this.props.history.push('profile');
+        alert('Form Submitted!');
+
     };
 
 
 
-    handleCancel = () => {
-        this.props.history.push('profile');
-    }
+
 
 
 
