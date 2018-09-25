@@ -12,7 +12,7 @@ import RegisterPage from './components/RegisterPage/RegisterPage';
 import HomePage from './components/HomePage/HomePage';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import LocationForm from './components/LocationForm/LocationForm';
-import AdminPage from './components/AdminPage/AdminPage';
+// import AdminPage from './components/AdminPage/AdminPage';
 import DetailsPage from './components/DetailsPage/DetailsPage';
 import ScrollDialog from './components/ScrollDialog/ScrollDialog.js';
 import './styles/main.css';

@@ -53,9 +53,7 @@ class ProfilePage extends Component {
     this.props.dispatch({ type: 'DELETE_POST', payload: this.location });
     
   }
-  // goToDetails = () => {
-  //   <Link to={`/details/${post.id}`}>HELLO</Link>
-  // }
+
 
   render() {
     let content = null;
@@ -86,9 +84,17 @@ class ProfilePage extends Component {
                             {/* <Link to={`/details/${post.id}`}>POSTPOSTPOST</Link> */}
 
 
-                            <img onClick={this.goToDetails} src={post.image_path} alt={post.description} height="200px" width="200px" />
+                            <img src={post.image_path} 
+                            alt={post.description} height="200px"
+                             width="200px"
+                              onClick={ () => this.props.history.push(`/details/${post.id}`)}/>
+                           
                             <br/>
-                            <Button onClick={this.handleClick}>Remove Post </Button>
+                            
+                            <Button onClick={this.handleClick}>
+                            Remove Post 
+                            </Button>
+                            
                           </span>
                         </div>
                       </div>

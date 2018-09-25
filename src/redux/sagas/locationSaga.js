@@ -17,7 +17,8 @@ function* fetchLocation() {
 }
 
 //GET BY ID 
-function* byId(action) {
+function* byId() {
+
   // try {
   //   const response = yield call(axios.get, `/api/location/profile`);
   //   const responseAction = { type: 'SET_LOCATION', payload: response.data };
@@ -27,6 +28,7 @@ function* byId(action) {
   // catch (error) {
   //   console.log('ERROR in get posts in ID sagas');
   // }
+
   try {
       const response = yield call(axios.get, `/api/location/profile`);
       yield put({type: 'SET_LOCATION' , payload:response.data})
@@ -37,6 +39,18 @@ function* byId(action) {
     catch (error) {
       console.log('ERROR in get posts in ID sagas');
     }
+}
+
+
+function* byPost(action){
+  console.log(action.payload);
+  try {
+    const response = yield call(axios.get, `api/location/details/${action.payload}`)
+    yield put({type: 'SET_POST' , payload: response.data})
+  }
+  catch(error){
+    console.log('ERROR in byPost in sagas');
+  }
 }
 
 //ADD DATA TO DB
@@ -65,6 +79,7 @@ function* locationSaga() {
   yield takeLatest('ADD_ITEM', addItem);
   yield takeLatest('BY_ID', byId);
   yield takeEvery('DELETE_POST', deletePost);
+  yield takeEvery('BY_POST', byPost);
 }
 
 

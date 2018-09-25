@@ -33,6 +33,11 @@ class HomePage extends Component {
     this.props.dispatch(triggerLogout());
   }
 
+  // handleDetails = () => {
+  //   this.props.history.push('details');
+  // }
+
+
   render() {
     let content = null;
 

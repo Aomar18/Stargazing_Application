@@ -56,8 +56,7 @@ router.post('/', (req, res) => {
 });
 
 
-//GET BY ID
-
+//GET BY ID on PROFILE PAGE
 router.get('/profile', (req, res) => {
     if(req.isAuthenticated()){
         const query = `SELECT "location".*, "person"."id" as person_id, "person"."username"
@@ -75,6 +74,25 @@ router.get('/profile', (req, res) => {
         res.sendStatus(403);
     }
 });
+
+
+//DETAILS PAGE GET
+router.get('/details/:id', (req, res) => {
+    if(req.isAuthenticated()){
+        console.log(req.params.id);
+        const query = `SELECT * FROM "location" WHERE id=$1`;
+        pool.query(query, [req.params.id])
+        .then((results) => {
+            res.send(results.rows); 
+        }).catch((error) => {
+            console.log('Error getting posts by user id', error);
+            res.sendStatus(500);
+        });
+    } else {
+        res.sendStatus(403);
+    }
+});
+
 
 
 router.delete('/', (req, res) => {

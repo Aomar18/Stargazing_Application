@@ -1,16 +1,13 @@
 import { combineReducers } from 'redux';
 
-const location = (state = [], action) => {
-    if (action.type === 'SET_LOCATION') {
+const details = (state = [], action) => {
+    if (action.type === 'SET_POST') {
         return action.payload;
     }
     return state
 };
 
 
-
-
-
 export default combineReducers({
-    location,
+    details
 });
