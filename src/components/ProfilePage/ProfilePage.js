@@ -91,11 +91,11 @@ class ProfilePage extends Component {
                            
                             <br/>
                             
+                            
+                          </span>
                             <Button onClick={this.handleClick}>
                             Remove Post 
                             </Button>
-                            
-                          </span>
                         </div>
                       </div>
 

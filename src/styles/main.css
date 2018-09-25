@@ -106,24 +106,29 @@ body {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 5px; 
-    height: 400px;
-    width: 400px;
-    background-color: gray;
+    border-radius: 20px; 
+    height: 350px;
+    width: 350px;
+    background-color: black;
     display: inline-block;
     flex-wrap: wrap;
-    margin: 10px;
+    top: 10px;
+    bottom: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
 }
 
 .card-container{
     display: inline-block;
     margin-right: auto;
     margin-left: auto;
-
+    padding: 10px;
 }
 
 .outercard {
-    background-color: darkblue;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
     height: 420px;
     width: 420px;
     margin-bottom: 40px;
@@ -132,21 +137,17 @@ body {
     justify-content: space-evenly;
 }
 
-
 .outercard:hover {
-    background-image: url('../images/starwatch.jpg');
-    
+    padding: 10px;
+    border-radius: 20px;
+    background-color: darkblue;
+    height: 420px;
+    width: 420px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    text-align: center;
+    justify-content: space-evenly;
 }
-
-
-
-
-/* .card:hover {    
-    
-    flex: wrap;
-    justify-content: space-between;
-    
-} */
 
 img {
     margin-left: 10%;
