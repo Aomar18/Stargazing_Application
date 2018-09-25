@@ -67,7 +67,7 @@ function* addItem(action) {
 function* deletePost(action) {
   console.log(action.payload);
       try {
-        yield call(axios.delete, `/profile/?id=` + action.payload.id);
+        yield call(axios.delete, `/profile/id`);
         yield put({ type: 'DELETE_POST'})
       } catch(error){
         alert('unable to remove post');

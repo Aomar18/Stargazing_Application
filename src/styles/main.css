@@ -137,6 +137,27 @@ body {
     justify-content: space-evenly;
 }
 
+
+
+.inputlog {
+border-radius: 20px;
+background-color: silver;
+}
+
+.reglog{
+    border-radius: 20px;
+    background-color: silver;
+
+}
+
+#submit-login {
+    margin: 20px;    
+}
+
+#submit-register {
+    margin: 20px;
+}
+
 .outercard:hover {
     padding: 10px;
     border-radius: 20px;

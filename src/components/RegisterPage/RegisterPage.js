@@ -76,10 +76,11 @@ class RegisterPage extends Component {
         {this.renderAlert()}
         <form className="register-form" onSubmit={this.registerUser}>
           <h1>Register User</h1>
-          <div>
+          <div >
             <label htmlFor="username">
               Username:
               <input
+                className="reglog"
                 type="text"
                 name="username"
                 value={this.state.username}
@@ -91,6 +92,7 @@ class RegisterPage extends Component {
             <label htmlFor="password">
               Password:
               <input
+                className="reglog"
                 type="password"
                 name="password"
                 value={this.state.password}
@@ -100,14 +102,18 @@ class RegisterPage extends Component {
           </div>
           <div>
             <Button
+              id="submit-register"
               type="submit"
               name="submit"
               value="Register"
               variant="contained"
           >Register </Button>
 
-            <Button color="secondary"
-                    variant="contained" onClick={this.handleCancel}>Cancel</Button>
+            <Button
+             color="secondary"
+             variant="contained"
+             onClick={this.handleCancel}>
+            Cancel</Button>
           </div>
         </form>
       </div>

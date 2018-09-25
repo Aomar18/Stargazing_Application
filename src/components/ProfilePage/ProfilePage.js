@@ -12,7 +12,7 @@ import Button from '@material-ui/core/Button';
 
 const mapStateToProps = state => ({
   user: state.user,
-  location: state.location
+  location: state.location.location
 });
 
 class ProfilePage extends Component {
@@ -68,7 +68,7 @@ class ProfilePage extends Component {
           <h1> Profile Page </h1>
 
           <div className="card-container-pp">
-            {this.props.location.location.map((post) => {
+            {this.props.location.map((post) => {
               return (
 
                 <div key={post.id}>

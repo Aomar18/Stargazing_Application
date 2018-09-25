@@ -33,7 +33,7 @@ class ScrollDialog extends React.Component {
         >
           <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
           <DialogContent>
-            <DialogContentText>
+          <DialogContentText>
              
             </DialogContentText>
           </DialogContent>

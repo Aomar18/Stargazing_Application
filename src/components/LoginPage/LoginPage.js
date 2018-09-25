@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { triggerLogin, formError, clearError } from '../../redux/actions/loginActions';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
@@ -72,7 +72,7 @@ class LoginPage extends Component {
     return (
       <div>
 
-      
+
         <div className="login-container">
 
           {this.renderAlert()}
@@ -82,6 +82,7 @@ class LoginPage extends Component {
               <label htmlFor="username">
                 Username:
               <input
+                  className="inputlog"
                   type="text"
                   name="username"
                   value={this.state.username}
@@ -93,6 +94,7 @@ class LoginPage extends Component {
               <label htmlFor="password">
                 Password:
               <input
+                  className="inputlog"
                   type="password"
                   name="password"
                   value={this.state.password}
@@ -102,24 +104,29 @@ class LoginPage extends Component {
             </div>
             <div>
               <Button
+                id="submit-login"
                 type="submit"
                 name="submit"
                 value="Log In"
                 color="primary"
                 variant="contained"
+                size='medium'
               >Submit</Button>
-              
-              <Button variant="contained" 
-              onClick={this.handleRegister}>
-              Register
+
+
+              <Button
+                variant="contained"
+                size='small'
+                onClick={this.handleRegister}>
+                Register
               </Button>
-              
+
             </div>
           </form>
         </div>
 
 
-      
+
 
 
 
