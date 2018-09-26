@@ -11,125 +11,145 @@ import Button from '@material-ui/core/Button';
 
 
 const mapStateToProps = state => ({
-  user: state.user,
-  location: state.location.location
+    user: state.user,
+    location: state.location.location
 });
 
 class ProfilePage extends Component {
 
-  componentDidMount() {
-    this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
-    // this.getLocation();
-    this.getById();
-    this.props.dispatch({ type: 'BY_ID' })
-  }
-
-  componentDidUpdate() {
-    if (!this.props.user.isLoading && this.props.user.userName === null) {
-      this.props.history.push('home');
+    componentDidMount() {
+        this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
+        // this.getLocation();
+        this.getById();
+        this.props.dispatch({ type: 'BY_ID' })
     }
-  }
+
+    componentDidUpdate() {
+        if (!this.props.user.isLoading && this.props.user.userName === null) {
+            this.props.history.push('home');
+        }
+    }
 
 
-  getLocation = () => {
-    this.props.dispatch({ type: 'FETCH_LOCATION' })
-  }
+    getLocation = () => {
+        this.props.dispatch({ type: 'FETCH_LOCATION' })
+    }
 
 
-  getById = () => {
-    console.log('in getById, user id:')
-    this.props.dispatch({ type: 'BY_ID' })
-  }
+    getById = () => {
+        console.log('in getById, user id:')
+        this.props.dispatch({ type: 'BY_ID' })
+    }
 
-  deletePost = (postId) => {
-    console.log('Delete post:', postId);
-    const action = {type:'DELETE_GARDEN',payload:postId};
-    console.log('action' , action);
-    this.props.dispatch(action);
-};
 
-  handleClick = (event) => {
-    console.log('Post', event.target.value);
-    this.props.dispatch({ type: 'DELETE_POST', payload: this.location });
+
+
+    // deletePost = (postId) => {
+    //     console.log('Delete post:', postId);
+    //     const action = { type: 'DELETE_POST', payload: postId };
+    //     console.log('action', action);
+    //     this.props.dispatch(action);
+    // };
+
+
+
+    handleDelete = (id) => {
+        console.log('Post', id);
+        this.props.dispatch({ type: 'DELETE_POST', payload:id });
+
+    }
+
+
+
+
     
-  }
+
+    // handleUpdate = (event) => {
+    //     this.props.dispatch({ type: 'FETCH_LOCATION', payload: this.location })
+    // }
+
+    render() {
+        let content = null;
+
+        if (this.props.user.userName) {
+            content = (
+                <div>
 
 
-  render() {
-    let content = null;
-
-    if (this.props.user.userName) {
-      content = (
-        <div>
 
 
+                    <h1> Profile Page </h1>
+
+                    <div className="card-container-pp">
+                        {this.props.location.map((post) => {
+                            return (
+
+                                <div key={post.id}>
+                                    <Grid container spacing={8}>
+                                        <Grid item xs={4}>
+                                            <div className="outercard">
+                                                <div className="card">
+                                                    <span>
+                                                        <p>Name of location:{post.title}</p>
+                                                        <p>Description:{post.description}</p>
+                                                        <p>Bortle Scale Value:{post.bortle_value}</p>
+
+                                                        {/* <Link to={`/details/${post.id}`}>POSTPOSTPOST</Link> */}
+                                                        <img src={post.image_path}
+                                                            alt={post.description} height="200px"
+                                                            width="200px"
+                                                            onClick={() => this.props.history.push(`/details/${post.id}`)} />
+                                                        <br />
+                                                    </span>
+
+                                                    {/* <Button 
+                                                    color="primary"
+                                                    variant="contained"
+                                                    onClick={this.handleUpdate}>
+                                                        EDIT
+                                                    </Button> */}
+
+                                                    <Button 
+                                                    color="secondary"
+                                                    variant="contained"
+                                                    onClick={() => this.handleDelete(post.id)}>
+                                                        Remove
+                                                    </Button>
+
+                                                </div>
+                                            </div>
+
+                                        </Grid>
+                                    </Grid>
+                                    <br />
+
+                                    <br />
+                                </div>
+                            )
+                        })}
+                        <Link to="/location">Create New Post</Link>
 
 
-          <h1> Profile Page </h1>
-
-          <div className="card-container-pp">
-            {this.props.location.map((post) => {
-              return (
-
-                <div key={post.id}>
-                  <Grid container spacing={8}>
-                    <Grid item xs={4}>
-                      <div className="outercard">
-                        <div className="card">
-                          <span>
-                            <p>Name of location:{post.title}</p>
-                            <p>Description:{post.description}</p>
-                            <p>Bortle Scale Value:{post.bortle_value}</p>
-
-                            {/* <Link to={`/details/${post.id}`}>POSTPOSTPOST</Link> */}
 
 
-                            <img src={post.image_path} 
-                            alt={post.description} height="200px"
-                             width="200px"
-                              onClick={ () => this.props.history.push(`/details/${post.id}`)}/>
-                           
-                            <br/>
-                            
-                            
-                          </span>
-                            <Button onClick={this.handleClick}>
-                            Remove Post 
-                            </Button>
-                        </div>
-                      </div>
+                        <br />
+                        <br />
 
-                    </Grid>
-                  </Grid>
-                  <br />
 
-                  <br />
+                    </div>
                 </div>
-              )
-            })}
-            <Link to="/location">Create New Post</Link>
+            );
+        }
 
 
+        return (
+            <div>
 
-
-            <br />
-            <br />
-
-
-          </div>
-        </div>
-      );
+                <Nav />
+                {content}
+            </div>
+        );
     }
-
-
-    return (
-      <div>
-
-        <Nav />
-        {content}
-      </div>
-    );
-  }
 }
 // this allows us to use <App /> in index.js
 export default connect(mapStateToProps)(ProfilePage);

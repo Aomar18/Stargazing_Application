@@ -81,8 +81,8 @@ router.get('/profile', (req, res) => {
 router.put('/', (req, res) => {
     const locationToUpdate = req.body;
     if (req.isAuthenticated()) {
-        const query = `UPDATE "location" SET (
-        "title" = $1,
+        const query = `UPDATE "location"
+         SET "title" = $1,
         "longitude"= $2,
         "latitude" = $3,
         "description" = $4,
@@ -93,16 +93,9 @@ router.put('/', (req, res) => {
         "image_path" = $9,
         "person_id" = $10,
         "userinput_date" = $11,
-        "address = $12"
-        )
-         VALUES (
-        $1,$2,
-        $3,$4,$5,
-        $6,$7,
-        $8,$9,
-        $10,$11,$12);`;
+        "address = $12"`;
         
-        pool.query(query, [
+        const queryValues = [
         locationToUpdate.title,
         locationToUpdate.longitude,
         locationtoUpdate.latitude,
@@ -115,8 +108,10 @@ router.put('/', (req, res) => {
         req.user.id,
         locationtoUpdate.userinput_date,
         locationtoUpdate.address
-
-        ]).then(() => { res.sendStatus(200);
+        ];
+        
+        pool.query(query, queryValues)
+        .then(() => { res.sendStatus(200);
             console.log(req.body);
             alert( 'Updated successfully!')
         }).catch((error) => {
@@ -146,12 +141,13 @@ router.get('/details/:id', (req, res) => {
 
 
 
-router.delete('/', (req, res) => {
-    const queryText = `DELETE FROM "location" WHERE "person_id" = $1;`;
-    pool.query(queryText, [req.query.id])
+router.delete(`/profile/:id`, (req, res) => {
+    console.log('here' , req.params.id);
+    const queryText = `DELETE FROM "location" WHERE "id" = $1;`;
+    pool.query(queryText, [req.params.id])
       .then(() => { res.sendStatus(200); })
       .catch((error) => {
-        console.log('Error completing SELECT location query', error);
+        console.log('Error completing DELETE location query', error);
         res.sendStatus(500);
       });
   });
