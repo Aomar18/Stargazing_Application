@@ -77,6 +77,56 @@ router.get('/profile', (req, res) => {
 });
 
 
+//UPDATE USER INPUTS 
+router.put('/', (req, res) => {
+    const locationToUpdate = req.body;
+    if (req.isAuthenticated()) {
+        const query = `UPDATE "location" SET (
+        "title" = $1,
+        "longitude"= $2,
+        "latitude" = $3,
+        "description" = $4,
+        "bortle_value" = $5,
+        "nelm" = $6,
+        "constellations_visible" = $7,
+        "name_constellation" = $8,
+        "image_path" = $9,
+        "person_id" = $10,
+        "userinput_date" = $11,
+        "address = $12"
+        )
+         VALUES (
+        $1,$2,
+        $3,$4,$5,
+        $6,$7,
+        $8,$9,
+        $10,$11,$12);`;
+        
+        pool.query(query, [
+        locationToUpdate.title,
+        locationToUpdate.longitude,
+        locationtoUpdate.latitude,
+        locationtoUpdate.description,
+        locationtoUpdate.bortle_value,
+        locationtoUpdate.NELM,
+        locationtoUpdate.constellations_visible,
+        locationtoUpdate.name_constellation,
+        locationtoUpdate.image_path,
+        req.user.id,
+        locationtoUpdate.userinput_date,
+        locationtoUpdate.address
+
+        ]).then(() => { res.sendStatus(200);
+            console.log(req.body);
+            alert( 'Updated successfully!')
+        }).catch((error) => {
+            console.log('Error posting new item', error);
+            res.sendStatus(500);
+        })
+    }
+});
+
+
 //DETAILS PAGE GET
 router.get('/details/:id', (req, res) => {
     if(req.isAuthenticated()){
