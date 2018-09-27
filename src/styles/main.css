@@ -126,14 +126,23 @@ body {
 }
 
 .card-container{
+    box-shadow: 5px 5px 50px 5px silver;
     display: inline-block;
     margin-right: auto;
     margin-left: auto;
     padding: 10px;
 }
 
+.image-details card {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
 .outercard {
-    box-shadow: 5px 5px 50px 5px silver;
+    
     padding: 10px;
     border-radius: 20px;
     background-image: url('../images/tree.jpg');

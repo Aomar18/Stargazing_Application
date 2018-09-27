@@ -52,7 +52,8 @@ class DetailsPage extends Component {
                                     
                                     <img src={post.image_path}
                                         alt={post.description}
-                                        height="300px" width="300px" />
+                                        height="300px" width="300px"
+                                        className="image-details" />
                                 </div>
                                 <h4 className="white-details">
                                         <p>Location:{post.title}</p>
