@@ -15,7 +15,9 @@ canvas {
  
 .white-details {
     color: white;
-
+    justify-content: space-evenly;
+    flex: wrap;
+    word-wrap: break-word;
 }
 
 .body-particles{
@@ -107,6 +109,8 @@ body {
 }
 
 .card {
+    border: solid;
+    shadow: 20px 20px 20px 20px black;
     position: relative;
     display: block;
     transition: 0.3s;
@@ -123,6 +127,9 @@ body {
     border-image-outset: 10px;
     margin-right: auto;
     margin-left: auto;
+    padding: 3px;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .card-container{
@@ -131,23 +138,15 @@ body {
     margin-right: auto;
     margin-left: auto;
     padding: 10px;
-}
-
-.image-details card {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-left: 150px;
-    margin-top: 150px;
+    overflow-y: scroll;
+    
 }
 
 .outercard {
-    
-    padding: 10px;
     border-radius: 20px;
     background-image: url('../images/tree.jpg');
     position: relative;
-    height: 620px;
+    height: 700px;
     width: 620px;
     margin-right: auto;
     margin-left: auto;
@@ -175,18 +174,6 @@ background-color: silver;
 
 #submit-register {
     margin: 20px;
-}
-
-.outercard {
-    padding: 10px;
-    border-radius: 20px;
-    background-color: darkblue;
-    height: 420px;
-    width: 420px;
-    margin-bottom: 40px;
-    margin-right: 40px;
-    text-align: center;
-    justify-content: space-evenly;
 }
 
 img {

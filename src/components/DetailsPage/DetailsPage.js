@@ -61,7 +61,7 @@ class DetailsPage extends Component {
                                         <p>Address:{post.address}</p> 
                                         <p>Bortle Value:{post.bortle_value}</p> 
                                         <p>NELM index:{post.nelm}</p> 
-                                        <p>{post.latitude}</p> 
+                                        <p>Latitude:{post.latitude}</p> 
 
                                     </h4>
                             </div>
