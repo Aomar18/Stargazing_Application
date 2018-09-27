@@ -102,12 +102,12 @@ class ProfilePage extends Component {
                                                         <br />
                                                     </span>
 
-                                                    {/* <Button 
-                                                    color="primary"
-                                                    variant="contained"
-                                                    onClick={this.handleUpdate}>
-                                                        EDIT
-                                                    </Button> */}
+                                                    <Button 
+                                                     color="primary"
+                                                     variant="contained"
+                                                     onClick={this.handleUpdate}>
+                                                         EDIT
+                                                     </Button> 
 
                                                     <Button 
                                                     color="secondary"

@@ -49,16 +49,20 @@ class DetailsPage extends Component {
 
                             <div className="outercard">
                                 <div className="card">
-                                    <h4>
-                                        Location:
-                                        <span className="gold">{post.title}</span>
-                                    </h4>
+                                    
                                     <img src={post.image_path}
                                         alt={post.description}
                                         height="300px" width="300px" />
                                 </div>
+                                <h4 className="white-details">
+                                        <p>Location:{post.title}</p>
+                                        <p>Description:{post.description}</p> 
+                                        <p>Address:{post.address}</p> 
+                                        <p>Bortle Value:{post.bortle_value}</p> 
+                                        <p>NELM index:{post.nelm}</p> 
+                                        <p>{post.latitude}</p> 
 
-                                <br />
+                                    </h4>
                             </div>
                         </div>
                     </div>

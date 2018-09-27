@@ -74,15 +74,12 @@ function* deletePost(action) {
 }
 
 
-
-
-
 //UPDATE POST
 function* updatePost(action) {
   console.log(action.payload);
   try {
-    yield call(axios.put, `/api/location` , action.payload);
-    yield put({ type: 'FETCH_LOCATION' })
+    yield call(axios.put, `/api/location/${action.payload.id}`);
+    yield put({ type: 'UPDATE_POST' })
   } catch (error) {
     alert('Unable to update post')
   }

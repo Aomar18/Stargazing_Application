@@ -13,6 +13,10 @@ canvas {
     width: 100%;   
 }
  
+.white-details {
+    color: white;
+
+}
 
 .body-particles{
     position: absolute;
@@ -103,18 +107,22 @@ body {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    display: block;
     transition: 0.3s;
     border-radius: 20px; 
     height: 350px;
     width: 350px;
-    background-color: black;
     display: inline-block;
     flex-wrap: wrap;
     top: 10px;
     bottom: 10px;
     padding: 10px;
     justify-content: space-evenly;
+    background-image: url('../images/tree.jpg');
+    border-image-outset: 10px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .card-container{
@@ -125,15 +133,18 @@ body {
 }
 
 .outercard {
+    box-shadow: 5px 5px 50px 5px silver;
     padding: 10px;
     border-radius: 20px;
-    background-color: black;
-    height: 420px;
-    width: 420px;
-    margin-bottom: 40px;
-    margin-right: 40px;
+    background-image: url('../images/tree.jpg');
+    position: relative;
+    height: 620px;
+    width: 620px;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
     justify-content: space-evenly;
+    flex: wrap;
 }
 
 
@@ -341,12 +352,14 @@ input[type="submit"] {
     
 }
 
-p{
-    color: purple;
-    font-family: bold;
-
+.details-card {
+    height: 200px;
+    width:400px;
+    background-color: gray;
+    margin-bottom: 400px;
+    justify-content: wrap;
+    flex: wrap;
 }
-
 
 .link a {
     
@@ -370,10 +383,7 @@ p{
 
 }
 
-.card:hover {
-    background-image: url('../images/starwatch.jpg');
 
-}
 
 Button {
     padding: 10px;
