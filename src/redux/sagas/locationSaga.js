@@ -1,15 +1,7 @@
 import { put, call, takeLatest, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
-//MAIN SAGA
-function* locationSaga() {
-  yield takeLatest('FETCH_LOCATION', fetchLocation);
-  yield takeLatest('ADD_ITEM', addItem);
-  yield takeLatest('BY_ID', byId);
-  yield takeEvery('DELETE_POST', deletePost);
-  yield takeEvery('BY_POST', byPost);
-  yield takeEvery('UPDATE_POST', updatePost);
-}
+
 
 
 //GET DATA
@@ -78,10 +70,11 @@ function* deletePost(action) {
 function* updatePost(action) {
   console.log(action.payload);
   try {
-    yield call(axios.put, `/api/location/${action.payload.id}`);
-    yield put({ type: 'UPDATE_POST' })
+    yield call(axios.put, `/api/location/${action.payload.id}`, action.payload);
+    yield put({ type: 'SET_LOCATION' })
   } catch (error) {
-    alert('Unable to update post')
+    console.log('put sagas error' , error);
+    alert('error update in sagas')
   }
 }
 
@@ -90,4 +83,11 @@ function* updatePost(action) {
 
 
 
-export default locationSaga;
+export default function* locationSaga() {
+  yield takeLatest('FETCH_LOCATION', fetchLocation);
+  yield takeLatest('ADD_ITEM', addItem);
+  yield takeLatest('BY_ID', byId);
+  yield takeEvery('DELETE_POST', deletePost);
+  yield takeEvery('BY_POST', byPost);
+  yield takeEvery('UPDATE_POST', updatePost);
+};

@@ -47,7 +47,7 @@ class DetailsPage extends Component {
                     <div className="card-container">
                         <div key={post.id}>
 
-                            <div className="outercard">
+                            <div className="outercard-details">
                                 <div className="card">
                                     
                                     <img src={post.image_path}
@@ -64,6 +64,8 @@ class DetailsPage extends Component {
                                         <p>Latitude:{post.latitude}</p> 
 
                                     </h4>
+
+                                    
                             </div>
                         </div>
                     </div>

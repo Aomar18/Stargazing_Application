@@ -78,9 +78,6 @@ body {
 	}
 }
 
-
-
-
 .chrome {
     text-align: center;
     font-family: 'Jura', sans-serif;
@@ -92,6 +89,7 @@ body {
 }
 
 .welcome {
+    background-image: url('../images/tree.jpg');
     font-size: 20px;
     font-family: cursive;
     position: absolute;
@@ -108,11 +106,14 @@ body {
     color: silver;
 }
 
+.profile-text-card{
+    color: red;
+    font-style: bold;
+}
 .card {
     border: solid;
-    shadow: 20px 20px 20px 20px black;
+    box-shadow: 20px 20px 20px 20px black;
     position: relative;
-    display: block;
     transition: 0.3s;
     border-radius: 20px; 
     height: 350px;
@@ -139,14 +140,27 @@ body {
     margin-left: auto;
     padding: 10px;
     overflow-y: scroll;
-    
 }
 
-.outercard {
+.outercard-details {
     border-radius: 20px;
     background-image: url('../images/tree.jpg');
     position: relative;
-    height: 700px;
+    height: auto;
+    padding: 10px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    justify-content: space-evenly;
+    flex: wrap;
+}
+
+.outercard-profile {
+    border-radius: 20px;
+    background-image: url('../images/nebula.jpg');
+    position: relative;
+    height: 400px;
     width: 620px;
     margin-right: auto;
     margin-left: auto;
@@ -183,6 +197,7 @@ img {
 .instructions h1 {
     font-size: 54px;
     font-weight: 700;
+    /* background-image: url('../images/tree.jpg'); */
     
 }
 
@@ -245,6 +260,10 @@ width: 500px;
 border-radius: 40px;
 }
 
+.white {
+    color: white;
+}
+
 .register-form  {
 background-image: url('../images/tree.jpg');
 text-align: center;
@@ -258,13 +277,12 @@ img {
     text-align: center;   
 }
 
-form {
-    background-color: #006366;
-    width: 30%;
-    height: 250px;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 2px;
+.dialog-form {
+    margin: 10px;
+    padding: 5px;
+    /* background-image: url('../images/tree.jpg'); */
+    background-color: white;
+
 }
 
 .locform {

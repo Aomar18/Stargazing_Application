@@ -20,7 +20,7 @@ class Header extends Component {
     let welcome = null;
     if (this.props.user.userName) {
       welcome = (
-        <div>
+        <div className="welcome-body">
           <div className="welcome"> hello , {this.props.user.userName} </div> 
           <button className="welcomeButton" onClick={this.logout}>Log out</button>
           

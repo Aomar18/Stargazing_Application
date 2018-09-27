@@ -67,20 +67,12 @@ class LocationForm extends Component {
     };
 
 
-
-
-
-
-
     handleRadioChange = (event) => {
         console.log(event.target.value)
         this.setState({
             ...this.state,
             constellations_visible: event.target.value
         })
-
-
-
     }
 
 

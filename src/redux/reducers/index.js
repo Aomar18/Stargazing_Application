@@ -3,12 +3,12 @@ import user from './userReducer';
 import login from './loginReducer';
 import location from './locationReducer';
 import details from './detailsReducer';
-// import update from './updateReducer.js';
+import update from './updateReducer.js';
 
 const store = combineReducers({
   location,
   details,
-  // update,
+  update,
   user,
   login,
 });

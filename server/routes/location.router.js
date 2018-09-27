@@ -78,7 +78,8 @@ router.get('/profile', (req, res) => {
 
 
 //UPDATE USER INPUTS 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
+    console.log('server put:' , req.body);
     const locationToUpdate = req.body;
     if (req.isAuthenticated()) {
         const query = `UPDATE "location"
@@ -93,27 +94,41 @@ router.put('/', (req, res) => {
         "image_path" = $9,
         "person_id" = $10,
         "userinput_date" = $11,
-        "address = $12"`;
+        "address" = $12 
+        WHERE
+        "location"."id" = $13;`;
         
-        const queryValues = [
-        locationToUpdate.title,
-        locationToUpdate.longitude,
-        locationtoUpdate.latitude,
-        locationtoUpdate.description,
-        locationtoUpdate.bortle_value,
-        locationtoUpdate.NELM,
-        locationtoUpdate.constellations_visible,
-        locationtoUpdate.name_constellation,
-        locationtoUpdate.image_path,
+        // const queryValues = [
+        // locationToUpdate.title,
+        // locationToUpdate.longitude,
+        // locationtoUpdate.latitude,
+        // locationtoUpdate.description,
+        // locationtoUpdate.bortle_value,
+        // locationtoUpdate.NELM,
+        // locationtoUpdate.constellations_visible,
+        // locationtoUpdate.name_constellation,
+        // locationtoUpdate.image_path,
+        // req.user.id,
+        // locationtoUpdate.userinput_date,
+        // locationtoUpdate.address
+        // ];
+        
+        pool.query(query, [
+        req.body.title,
+        req.body.longitude,
+        req.body.latitude,
+        req.body.description,
+        req.body.bortle_value,
+        req.body.NELM,
+        req.body.constellations_visible,
+        req.body.name_constellation,
+        req.body.image_path,
         req.user.id,
-        locationtoUpdate.userinput_date,
-        locationtoUpdate.address
-        ];
-        
-        pool.query(query, queryValues)
+        req.body.userinput_date,
+        req.body.address,
+        req.body.currentPost.id
+        ])
         .then(() => { res.sendStatus(200);
-            console.log(req.body);
-            alert( 'Updated successfully!')
         }).catch((error) => {
             console.log('Error posting new item', error);
             res.sendStatus(500);
