@@ -95,8 +95,7 @@ body {
     font-family: 'Jura' bold;
     position: absolute;
     right: 140px;
-    top: 200px;
-    
+    top: 200px;   
 }
 
 .welcomeButton {
@@ -403,7 +402,7 @@ background-image: url("../images/nebula.jpg");
 }
 .links:hover{
     font-size:20px;
-
+    background: url('../images/starwatch.jpg');
 }
 
 
