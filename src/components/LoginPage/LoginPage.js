@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { triggerLogin, formError, clearError } from '../../redux/actions/loginActions';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import Button from '@material-ui/core/Button';
+import anime from 'animejs'
 
 const mapStateToProps = state => ({
   user: state.user,

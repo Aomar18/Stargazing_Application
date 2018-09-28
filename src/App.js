@@ -20,7 +20,7 @@ import './styles/main.css';
 const particleOpt = {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 100,
       "density": {
         "enable": true,
         "value_area": 800
@@ -69,8 +69,8 @@ const particleOpt = {
     },
     "move": {
       "enable": true,
-      "speed": 7,
-      "direction": "bottom-left",
+      "speed": 3,
+      "direction": "left",
       "random": true,
       "straight": false,
       "out_mode": "out",

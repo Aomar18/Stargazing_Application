@@ -41,16 +41,16 @@ body {
          right top, 
          from(#222), to(#222), 
     color-stop(0.5, #fff)) 0 0 no-repeat; */
-    background-image:
+    /* background-image:
      linear-gradient(-40deg,
       transparent 0%,
       transparent 40%,
       #fff 50%, 
       transparent 60%, 
       transparent 100%);
-  
-    color:
-     rgba(255, 255, 255, 0.01);;
+   */
+   color:
+     black;
     background-clip:
      mytitleanimation;
     animation-name:
@@ -60,7 +60,8 @@ body {
     animation-iteration-count: 
     infinite;
     text-shadow:
-     0 0px 0px rgba(255, 255, 255, 0.5);
+     10 10px 10px black;
+     
 }
 
 @keyframes shine {
@@ -89,12 +90,13 @@ body {
 }
 
 .welcome {
-    background-image: url('../images/tree.jpg');
     font-size: 20px;
-    font-family: cursive;
+    color:black;
+    font-family: 'Jura' bold;
     position: absolute;
     right: 140px;
     top: 200px;
+    
 }
 
 .welcomeButton {
@@ -104,6 +106,7 @@ body {
     border-radius: 40px;
     background-color: black;
     color: silver;
+    font-family: 'Jura';
 }
 
 .profile-text-card{
@@ -205,7 +208,7 @@ img {
     /* background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png"); */
     /* background-repeat: no-repeat;  */
     /* background-position: center; */
-    background:
+    /* background: */
      /* linear-gradient( to top right, 
     white,
     black,black,black,black,
@@ -215,7 +218,7 @@ img {
     black,black,
     white
     ); */
-    radial-gradient( 
+    /* radial-gradient( 
         white,
         black,
         black,
@@ -223,7 +226,8 @@ img {
         black,
         black,
         black
-        ); 
+        );  */
+        background-color: white;
     padding: 5px;
     color: skyblue;
     width: 100%;
@@ -256,7 +260,9 @@ background-image: url('../images/nebula.jpg');
 text-align: center;
 font-family: 'Jura';
 color: white;
-width: 500px;
+width: 300px;
+height: 500px;
+margin: 20px auto;
 border-radius: 40px;
 }
 
@@ -347,10 +353,13 @@ input[type="submit"] {
 }
 
 .navbar {
-    background-image: url("../images/starwatch2.jpg");
+background-image: url("../images/nebula.jpg");
   /* background-color: #003366; */
+  background-size: cover;
+  background-position-y: relative;
   width: 100%;
   border-radius: 0px;
+
 }
 
 .link {

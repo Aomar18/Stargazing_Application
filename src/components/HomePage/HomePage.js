@@ -57,7 +57,7 @@ class HomePage extends Component {
               *** Vantage Point is an application that provides you with a means to..... ****
         static information about observatories - 4 posts GOES HERE!!
            </h2>
-           
+
         <iframe src="https://www.google.com/maps/d/embed?mid=1TwgRHcqVYIXHS6yaByCMipCeU08" width="640" height="480"></iframe>
 
           </div>
@@ -157,9 +157,6 @@ class HomePage extends Component {
           <br />
           <Link to="/location">Create New Post</Link>
           <br />
-
-
-
           {this.props.location.location.map((post) => {
             return (
               <div className="card-container">
@@ -172,26 +169,14 @@ class HomePage extends Component {
                       </h4>
                       <img src={post.image_path} alt={post.description} height="300px" width="300px" />
                     </div>
-
                     <br />
                   </div>
                 </div>
               </div>
             )
           })}
-
-          <p>
-
-          </p>
           <br />
           <br />
-
-
-
-
-
-
-          <button onClick={this.logout} > Sign Out </button>
         </div>
       );
     }
