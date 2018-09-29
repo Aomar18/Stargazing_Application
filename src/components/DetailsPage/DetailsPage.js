@@ -48,11 +48,10 @@ class DetailsPage extends Component {
                         <div key={post.id}>
 
                             <div className="outercard-details">
-                                <div className="card">
+                                <div className="card-details">
                                     
                                     <img src={post.image_path}
                                         alt={post.description}
-                                        height="300px" width="300px"
                                         className="image-details" />
                                 </div>
                                 <h4 className="white-details">
@@ -61,6 +60,7 @@ class DetailsPage extends Component {
                                         <p>Address:{post.address}</p> 
                                         <p>Bortle Value:{post.bortle_value}</p> 
                                         <p>NELM index:{post.nelm}</p> 
+                                        <p>Longitude:{post.longitude}</p> 
                                         <p>Latitude:{post.latitude}</p> 
 
                                     </h4>

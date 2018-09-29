@@ -1,16 +1,19 @@
+
+
 .home-text {
 font-size: 15px;
-font-family: cursive;
+
 
 }
 
 
-canvas {
+canvas, body {
     background-color: black;
     position: absolute;
     z-index: -10;
     height: 100%;
     width: 100%;   
+    display: block;
 }
  
 .white-details {
@@ -60,7 +63,9 @@ body {
     animation-iteration-count: 
     infinite;
     text-shadow:
-     10 10px 10px black;
+     10 20px 10px black;
+     width: 100%;
+
      
 }
 
@@ -91,8 +96,8 @@ body {
 
 .welcome {
     font-size: 20px;
-    color:black;
-    font-family: 'Jura' bold;
+    color:silver;
+    font-family: 'Jura';
     position: absolute;
     right: 140px;
     top: 200px;   
@@ -129,6 +134,7 @@ body {
     background-image: url('../images/tree.jpg');
     border-image-outset: 10px;
     margin-right: auto;
+    color: silver;
     margin-left: auto;
     padding: 3px;
     word-break: break-all;
@@ -151,14 +157,16 @@ body {
     height: auto;
     padding: 10px;
     width: 400px;
+    height: 800px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     justify-content: space-evenly;
     flex: wrap;
+    color: silver;
 }
 
-.outercard-profile {
+/* .outercard-profile {
     border-radius: 20px;
     background-image: url('../images/nebula.jpg');
     position: relative;
@@ -169,7 +177,7 @@ body {
     text-align: center;
     justify-content: space-evenly;
     flex: wrap;
-}
+} */
 
 
 
@@ -194,13 +202,29 @@ background-color: silver;
 
 img {
     margin-left: 10%;
+    width: 200px;
+    height: 200px;
 }
+.img-details {
+    margin-left: 10%;
+    width: 400px;
+    height: 400px;
+}
+
+.inside-instructions {
+    width:100%;
+}
+
 
 .instructions h1 {
     font-size: 54px;
     font-weight: 700;
     /* background-image: url('../images/tree.jpg'); */
     
+}
+
+header {
+    width: 100%;
 }
 
 .instructions {
@@ -226,10 +250,11 @@ img {
         black,
         black
         );  */
-        background-color: white;
+    background-color: white;
     padding: 5px;
     color: skyblue;
     width: 100%;
+    margin-top: 0;
     height: 240px;
     
 }
@@ -243,8 +268,8 @@ tr:nth-child(even) {
 
 .gold {
     text-align: center;
-    font-family: cursive;
-    color: gold;
+    font-family: Jura;
+    color: white;
     text-decoration: underline;
 
 }
@@ -259,13 +284,19 @@ background-image: url('../images/nebula.jpg');
 text-align: center;
 font-family: 'Jura';
 color: white;
-width: 300px;
+width: 500px;
 height: 500px;
+margin-top: 300px;
 margin: 20px auto;
 border-radius: 40px;
 }
 
 .white {
+    color: white;
+}
+
+h3 {
+    font-family: Jura;
     color: white;
 }
 
@@ -280,6 +311,11 @@ border-radius: 40px;
 
 img {
     text-align: center;   
+}
+
+.table-intro {
+    font-family: Jura;
+    color: white;
 }
 
 .dialog-form {
@@ -334,6 +370,9 @@ InputLabel {
 input[type="submit"] {
     margin: 10px;
 }
+.profile-button{
+    margin: 10px;
+}
 
 .message {
     padding: 10px 0;
@@ -375,11 +414,12 @@ background-image: url("../images/nebula.jpg");
 }
 
 .details-card {
-    height: 200px;
-    width:400px;
+    height:900px;
+    width:500px;
     background-color: gray;
     margin-bottom: 400px;
     justify-content: wrap;
+    border: bold;
     flex: wrap;
 }
 
@@ -398,11 +438,11 @@ background-image: url("../images/nebula.jpg");
 /* Change the link color to #111 (black) on hover */
 .link:hover {
     
-    color: #eee;
+    color:gold;
 }
 .links:hover{
     font-size:20px;
-    background: url('../images/starwatch.jpg');
+    
 }
 
 
@@ -418,17 +458,17 @@ Button {
 
 /* START PARTICLE STUFF HERE  */
 
-
+iframe {
+    justify-self: center;
+}
 body {
   margin: 0;
+  padding: 0;
   font: normal 75% Arial, Helvetica,
     sans-serif;
 }
 
-canvas {
-  display: block;
 
-}
 
 /* ---- particles.js container ---- */
 #particles-js {
@@ -436,7 +476,7 @@ canvas {
   width: 100%;
   height: 100%;
   background-color: #000000;
-  background-image: url("");
+  background-image: url("../images/vantage.png");
   background-repeat: no-repeat;
   background-size: 20%;
   background-position: 50% 50%;

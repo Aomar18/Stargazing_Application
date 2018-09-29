@@ -90,7 +90,7 @@ const particleOpt = {
         "mode": "repulse"
       },
     
-      "resize": true
+      "resize": false
     },
     "modes": {
       "grab": {

@@ -38,8 +38,8 @@ class ProfilePage extends Component {
     constructor(props) {
         super(props);
         // currentPost: '',
-          this.state = {
-            
+        this.state = {
+
             open: false,
             currentPost: {},
             title: '',
@@ -89,7 +89,7 @@ class ProfilePage extends Component {
 
     handleOpen = (post) => {
         this.setState({ open: !this.state.open, currentPost: post })
-          
+
     }
     handleClose = () => {
         this.setState({ open: false })
@@ -121,19 +121,23 @@ class ProfilePage extends Component {
 
     handleDelete = (id) => {
         console.log('Post', id);
-        this.props.dispatch({ type: 'DELETE_POST',
-         payload: id });
+        this.props.dispatch({
+            type: 'DELETE_POST',
+            payload: id
+        });
 
     }
 
     handleUpdate = (event) => {
         event.preventDefault();
         console.log(this.state)
-        this.props.dispatch({ type: 'UPDATE_POST',
-        payload: this.state })
-        
-        
-      }
+        this.props.dispatch({
+            type: 'UPDATE_POST',
+            payload: this.state
+        })
+
+
+    }
 
     render() {
         let content = null;
@@ -143,14 +147,14 @@ class ProfilePage extends Component {
                 <div>
                     <h1> Profile Page </h1>
                     <div className="card-container-pp">
-                       {this.props.location.map((post) => {
+                        {this.props.location.map((post) => {
 
-                          <div className="white"> 
-                          {JSON.stringify(this.props.location)}
-                          </div>
+                            <div className="white">
+                                {JSON.stringify(this.props.location)}
+                            </div>
 
-                          return (
-                            
+                            return (
+
 
                                 <div key={post.id}>
                                     <Grid container spacing={8}>
@@ -187,7 +191,7 @@ class ProfilePage extends Component {
                                                                 aria-labelledby="alert-dialog-slide-title"
                                                                 aria-describedby="alert-dialog-slide-description"
                                                             >
-                                                                <form className="dialog-form"onSubmit={this.handleUpdate}>
+                                                                <form className="dialog-form" onSubmit={this.handleUpdate}>
                                                                     <div>
                                                                         <InputLabel>Title of location: </InputLabel>
                                                                         <br />
@@ -280,25 +284,27 @@ class ProfilePage extends Component {
                                                         </div>
                                                     </Modal>
 
+                                                    <div className="profile-button">
+                                                        <Button
+                                                            color="primary"
+                                                            variant="contained"
 
-                                                    <Button
-                                                        color="primary"
-                                                        variant="contained"
-                                                        onClick={() => this.handleOpen(post)}>
-                                                        EDIT
+                                                            onClick={() => this.handleOpen(post)}>
+                                                            EDIT
                                                      </Button>
 
-                                                    {/* onClick={() => this.handleUpdate(post)} */}
-                                                   
-                                                    <Button
-                                                        color="secondary"
-                                                        variant="contained"
-                                                        onClick={() => this.handleDelete(post.id)}>
-                                                        Remove
-                                                    </Button>
+                                                        {/* onClick={() => this.handleUpdate(post)} */}
 
+                                                        <Button
+                                                            color="secondary"
+                                                            variant="contained"
+
+                                                            onClick={() => this.handleDelete(post.id)}>
+                                                            Remove
+                                                    </Button>
+                                                    </div>
                                                 </div>
-                                                <h1 className="profile-text-card" color='red'> Click on image to see details! </h1>
+
                                             </div>
 
                                         </Grid>

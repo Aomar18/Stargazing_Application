@@ -46,7 +46,6 @@ router.post('/', (req, res) => {
         ]).then((results) => {
             console.log(req.body);
             res.sendStatus(200);
-            alert('Form submission successfully!')
         }).catch((error) => {
             console.log('Error posting new item', error);
             res.sendStatus(500);

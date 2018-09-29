@@ -14,7 +14,8 @@ import { triggerLogout } from '../../redux/actions/loginActions';
 
 const mapStateToProps = state => ({
   user: state.user,
-  location: state.location
+  location: state.location,
+  person: state.person
 });
 
 class HomePage extends Component {
@@ -51,14 +52,15 @@ class HomePage extends Component {
           <br />
 
           <div>
-            <h2>
+            <h3>
 
               
-              *** Vantage Point is an application that provides you with a means to..... ****
-        static information about observatories - 4 posts GOES HERE!!
-           </h2>
+              The map below provides a range of local observatories to gather
+              more resources on incoming celestial events, and tools for starwatching.
+           </h3>
 
-        <iframe src="https://www.google.com/maps/d/embed?mid=1TwgRHcqVYIXHS6yaByCMipCeU08" width="640" height="480"></iframe>
+        <iframe 
+        src="https://www.google.com/maps/d/embed?mid=1TwgRHcqVYIXHS6yaByCMipCeU08" width="640" height="480"></iframe>
 
           </div>
 
@@ -78,7 +80,7 @@ class HomePage extends Component {
           <h1 className="NELM-info">
             The NELM index
             <p className="home-text">
-              Naked-Eye Limiting Magnitude) is the
+              Naked-Eye Limiting Magnitude is the
               identifying marker that allows
         <br />stargazers to compare the relative darkness of
                their current location to a more structured scale
@@ -165,6 +167,12 @@ class HomePage extends Component {
                   <div className="outercard">
                     <div className="card">
                       <h4>
+                        Author: {this.props.user.userName}
+                        </h4>
+                      <h4>
+                        ID: {post.id}
+                        </h4>
+                        <h4>
                         Location:   <span className="gold">{post.title}</span>
                       </h4>
                       <img src={post.image_path} alt={post.description} height="300px" width="300px" />

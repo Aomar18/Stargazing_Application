@@ -21,7 +21,7 @@ class Header extends Component {
     if (this.props.user.userName) {
       welcome = (
         <div className="welcome-body">
-          <div className="welcome"> hello , {this.props.user.userName} </div> 
+          <div className="welcome"> Greetings, {this.props.user.userName} </div> 
           <button className="welcomeButton" onClick={this.logout}>Log out</button>
           
         </div>
@@ -31,7 +31,7 @@ class Header extends Component {
 
     return (
       <div className="instructions">
-        <div>
+        <div clasName="inside-instructions">
           <h1 className="chrome">▁ ▂ ▄ ▅ ▆ ▇ █ vαntαgє pσínt █ ▇ ▆ ▅ ▄ ▂ ▁</h1>
 
           {welcome}
