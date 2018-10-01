@@ -342,6 +342,13 @@ img {
     
 }
 
+h1 {
+    color: white;
+}
+
+.MuiTableCell-root-3 {
+    color: whitesmoke;
+}
 
 .NELM-info {
     text-align: center;

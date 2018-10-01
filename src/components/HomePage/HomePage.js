@@ -59,8 +59,8 @@ class HomePage extends Component {
               more resources on incoming celestial events, and tools for starwatching.
            </h3>
 
-        <iframe 
-        src="https://www.google.com/maps/d/embed?mid=1TwgRHcqVYIXHS6yaByCMipCeU08" width="640" height="480"></iframe>
+        {/* <iframe 
+        src="https://www.google.com/maps/d/embed?mid=1TwgRHcqVYIXHS6yaByCMipCeU08" width="640" height="480"></iframe> */}
 
           </div>
 
@@ -92,7 +92,7 @@ class HomePage extends Component {
 
           <div className="table-intro"> Below is a table with detail on how the scaling works:</div>
           <br />
-
+<div className="table">
           <Table color="secondary">
             {/* TABLE HEADER INFORMATION */}
 
@@ -107,52 +107,52 @@ class HomePage extends Component {
             <TableBody>
               <tr>
                 <TableCell><h1>1</h1></TableCell>
-                <TableCell>Excellent Dark-Sky Site </TableCell>
-                <TableCell>7.6–8.0</TableCell>
+                <TableCell><h1>Excellent Dark-Sky Site</h1></TableCell>
+                <TableCell><h1>7.6–8.0</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>2</h1></TableCell>
-                <TableCell>Typical Truly Dark Site</TableCell>
-                <TableCell>7.1–7.5</TableCell>
+                <TableCell><h1>Typical Truly Dark Site</h1></TableCell>
+                <TableCell><h1>7.1–7.5</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>3</h1></TableCell>
-                <TableCell>Rural Sky</TableCell>
-                <TableCell>6.6–7.0</TableCell>
+                <TableCell><h1>Rural Sky</h1></TableCell>
+                <TableCell><h1>6.6–7.0</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>4</h1></TableCell>
-                <TableCell>Rural-Subarban Transitory Site</TableCell>
-                <TableCell>6.1–6.5</TableCell>
+                <TableCell><h1>Rural-Subarban Transitory Site</h1></TableCell>
+                <TableCell><h1>6.1–6.5</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>5</h1></TableCell>
-                <TableCell>Suburban Sky</TableCell>
-                <TableCell>5.6–6.0</TableCell>
+                <TableCell><h1>Suburban Sky</h1></TableCell>
+                <TableCell><h1>5.6–6.0</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>6</h1></TableCell>
-                <TableCell>Bright Suburban Sky</TableCell>
-                <TableCell>5.1-5.5</TableCell>
+                <TableCell><h1>Bright Suburban Sky</h1></TableCell>
+                <TableCell><h1>5.1-5.5</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>7</h1></TableCell>
-                <TableCell>Suburban/urban transition</TableCell>
-                <TableCell>4.6-5.0</TableCell>
+                <TableCell><h1>Suburban/urban transition</h1></TableCell>
+                <TableCell><h1>4.6-5.0</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>8</h1></TableCell>
-                <TableCell>City sky</TableCell>
-                <TableCell>4.1-4.5</TableCell>
+                <TableCell><h1>City sky</h1></TableCell>
+                <TableCell><h1>4.1-4.5</h1></TableCell>
               </tr>
               <tr>
                 <TableCell><h1>9</h1></TableCell>
-                <TableCell>Inner-City Sky</TableCell>
-                <TableCell>4.0</TableCell>
+                <TableCell><h1>Inner-City Sky</h1></TableCell>
+                <TableCell><h1>4.0</h1></TableCell>
               </tr>
             </TableBody>
           </Table>
-
+          </div>
 
           <br />
           <br />
