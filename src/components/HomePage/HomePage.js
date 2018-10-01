@@ -166,15 +166,15 @@ class HomePage extends Component {
 
                   <div className="outercard">
                     <div className="card">
-                      <h4>
+                      <h1>
                         Author: {this.props.user.userName}
-                        </h4>
-                      <h4>
-                        ID: {post.id}
-                        </h4>
-                        <h4>
+                        </h1>
+                      <h1>
+                       Post ID: {post.id}
+                        </h1>
+                        <h1>
                         Location:   <span className="gold">{post.title}</span>
-                      </h4>
+                      </h1>
                       <img src={post.image_path} alt={post.description} height="300px" width="300px" />
                     </div>
                     <br />

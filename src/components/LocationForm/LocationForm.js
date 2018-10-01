@@ -84,69 +84,69 @@ render() {
 
             <form className="locform" onSubmit={this.handleSubmit}>
                 <div>
-                    <InputLabel>Title of location: </InputLabel>
+                    <InputLabel><h2>Title of location:</h2></InputLabel>
                     <br />
                     <Input value={this.state.title} type="text" onChange={this.handleChange} name="title" />
                 </div>
                 <br />
                 <div>
-                    <InputLabel>Longitude: </InputLabel>
+                    <InputLabel><h2>Longitude:</h2> </InputLabel>
                     <br />
                     <Input value={this.state.longitude} type="text" onChange={this.handleChange} name="longitude" />
                 </div>
                 <br />
                 <div>
-                    <InputLabel>Latitude: </InputLabel>
+                    <InputLabel><h2>Latitude:</h2> </InputLabel>
                     <br />
                     <Input value={this.state.latitude} type="text" onChange={this.handleChange} name="latitude" />
                 </div>
                 <br />
                 <div>
-                    <InputLabel>Description: </InputLabel>
+                    <InputLabel><h2>Description:</h2> </InputLabel>
                     <br />
                     <Input value={this.state.description} type="text" onChange={this.handleChange} name="description" />
                 </div>
                 <br />
                 <div>
-                    <InputLabel>Bortle Value: </InputLabel>
+                    <InputLabel><h2>Bortle Value:</h2> </InputLabel>
                     <br />
                     <Input value={this.state.bortle_value} type="text" onChange={this.handleChange} name="bortle_value" />
                 </div>
                 <br />
                 <div>
-                    <InputLabel>NELM: </InputLabel>
+                    <InputLabel><h2>NELM:</h2> </InputLabel>
                     <br />
                     <Input value={this.state.NELM} type="text" onChange={this.handleChange} name="NELM" />
                 </div>
                 <br/>
                 <div>
-                    <InputLabel>Are constellation visible ? </InputLabel>
+                    <InputLabel><h2>Are constellation visible ? </h2></InputLabel>
                     <br />
                     <br/>
                     <input value="true" type="radio" onChange={this.handleRadioChange} name="constellations_visible" />
-                    <InputLabel>Yes</InputLabel>
+                    <InputLabel><h2>Yes</h2></InputLabel>
                     
                     <br/>
 
                     <input value="false" type="radio" onChange={this.handleRadioChange} name="constellations_visible" />
                    
-                    <InputLabel>No</InputLabel>
+                    <InputLabel><h2>No</h2></InputLabel>
                 </div>
                 <div>
                     <br />
-                    <InputLabel> List all visible constellations:</InputLabel>
+                    <InputLabel><h2> List all visible constellations:</h2></InputLabel>
                     <br />
                     <Input type="text" value={this.state.name_constellation} onChange={this.handleChange} name="name_constellation" />
                 </div>
                 <div>
                     <br />
-                    <InputLabel>Location Address: </InputLabel>
+                    <InputLabel><h2>Location Address:</h2> </InputLabel>
                     <br />
                     <Input type="text" value={this.state.address} onChange={this.handleChange} name="address" />
                 </div>
                 <br />
                 <div>
-                    <InputLabel>Date: </InputLabel>
+                    <InputLabel><h2>Date:</h2> </InputLabel>
                     <br />
                     <Input type="date" value={this.state.userinput_date} onChange={this.handleChange} name="userinput_date" />
                 </div>

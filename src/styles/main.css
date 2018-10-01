@@ -328,7 +328,8 @@ img {
 
 .locform {
     background-color: silver;
-    height: 850px;
+    height: 1600px;
+    width: 400px;
     margin: 20px auto;
     padding: 25px;
     border-radius: 40px;
@@ -344,6 +345,11 @@ img {
 
 h1 {
     color: white;
+}
+
+.tech-used {
+    font-size: 40px;
+    color:red;
 }
 
 .MuiTableCell-root-3 {
