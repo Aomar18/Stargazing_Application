@@ -63,12 +63,14 @@ body {
     animation-iteration-count: 
     infinite;
     text-shadow:
-     10 20px 10px black;
+    2px 2px 30px black;
      width: 100%;
 
      
 }
-
+.deta {
+    font-family: Jura;
+}
 @keyframes shine {
 	0%, 10% {
 		background-position: -1000px;

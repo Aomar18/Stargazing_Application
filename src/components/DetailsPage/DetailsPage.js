@@ -54,17 +54,18 @@ class DetailsPage extends Component {
                                         alt={post.description}
                                         className="image-details" />
                                 </div>
-                                <h4 className="white-details">
-                                        <p>Location:{post.title}</p>
-                                        <p>Description:{post.description}</p> 
-                                        <p>Address:{post.address}</p> 
-                                        <p>Bortle Value:{post.bortle_value}</p> 
-                                        <p>NELM index:{post.nelm}</p> 
-                                        <p>Longitude:{post.longitude}</p> 
-                                        <p>Latitude:{post.latitude}</p> 
+                                <div className="deta">
+                                <p> Post ID# :{post.id}</p>
+                                        <h1>Title:{post.title}</h1>
+                                        <h1>Description:{post.description}</h1> 
+                                        <h1>Address:{post.address}</h1> 
+                                        <h1>Bortle Value:{post.bortle_value}</h1> 
+                                        <h1>NELM index:{post.nelm}</h1> 
+                                        <h1>Longitude:{post.longitude}</h1> 
+                                        <h1>Latitude:{post.latitude}</h1> 
 
-                                    </h4>
 
+</div>
                                     
                             </div>
                         </div>
